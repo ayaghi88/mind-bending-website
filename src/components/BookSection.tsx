@@ -9,7 +9,7 @@ const BookSection = () => {
           <div className="animate-slide-in-left">
             <img 
               src="/lovable-uploads/5fb6cc22-2c17-40e1-b7bd-f54f323709bc.png" 
-              alt="Mind Bending: The Quantum Reality Strategy by Amber Yaghi"
+              alt="Mind Bending: The Quantum Reality Strategist by Amber Yaghi"
               className="w-full max-w-md mx-auto shadow-2xl border-glow rounded-lg"
             />
           </div>
@@ -19,7 +19,7 @@ const BookSection = () => {
               Mind Bending
             </h2>
             <h3 className="font-playfair text-xl md:text-2xl text-brand-gold mb-6">
-              The Quantum Reality Strategy
+              The Quantum Reality Strategist
             </h3>
             
             <p className="text-brand-white text-lg mb-6 leading-relaxed">

@@ -21,7 +21,7 @@ const HeroSection = () => {
           
           <div className="mb-8 animate-slide-in-left">
             <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl text-brand-gold mb-4">
-              Mind Bending: The Quantum Reality Strategy
+              Mind Bending: The Quantum Reality Strategist
             </h2>
             <p className="text-brand-red font-bold text-lg md:text-xl">
               — Out Now

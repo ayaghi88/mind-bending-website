@@ -8,7 +8,7 @@ const BookSection = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="animate-slide-in-left">
             <img 
-              src="/lovable-uploads/5fb6cc22-2c17-40e1-b7bd-f54f323709bc.png" 
+              src="/lovable-uploads/7251b3ef-9f67-4986-a37b-0ed1f2a01986.png" 
               alt="Mind Bending: The Quantum Reality Strategist by Amber Yaghi"
               className="w-full max-w-md mx-auto shadow-2xl border-glow rounded-lg"
             />

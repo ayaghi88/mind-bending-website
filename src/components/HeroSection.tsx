@@ -11,7 +11,7 @@ const HeroSection = () => {
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center hero-gradient relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('/lovable-uploads/5fb6cc22-2c17-40e1-b7bd-f54f323709bc.png')] bg-cover bg-center opacity-20"></div>
+      <div className="absolute inset-0 bg-[url('/lovable-uploads/7251b3ef-9f67-4986-a37b-0ed1f2a01986.png')] bg-cover bg-center opacity-20"></div>
       
       <div className="container mx-auto px-4 z-10 relative">
         <div className="max-w-4xl mx-auto text-center">

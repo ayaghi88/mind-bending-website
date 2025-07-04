@@ -15,43 +15,45 @@ const CurriculumSection = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="animate-slide-in-left">
             <h2 className="font-playfair font-bold text-3xl md:text-4xl text-brand-white mb-6">
-              From Fake to Free
+              Transformational Consulting
             </h2>
             <h3 className="font-playfair text-xl md:text-2xl text-brand-gold mb-6">
-              The Realest Mindset Reset
+              Authentic Growth & Life Empowerment
             </h3>
             
             <p className="text-brand-white text-lg mb-6 leading-relaxed">
-              A trauma-informed curriculum designed for real-world transformation.
+              Motivational consulting designed to speak life into your journey while honoring your authentic self.
             </p>
             
             <p className="text-brand-white/80 mb-6 leading-relaxed">
-              Perfect for schools, rehabilitation centers, prisons, shelters, and reentry programs. 
-              This curriculum meets people where they are and guides them to where they want to be.
+              Perfect for individuals, organizations, schools, and communities ready to embrace positive change. 
+              My approach helps you aim for betterment without losing sight of who you truly are.
             </p>
             
             <div className="space-y-2 mb-8 text-brand-white/80">
-              <p>• Schools & Educational Programs</p>
-              <p>• Rehabilitation Centers</p>
-              <p>• Prison & Correctional Facilities</p>
-              <p>• Shelters & Transitional Housing</p>
-              <p>• Reentry Programs</p>
+              <p>• Individual Transformational Consulting</p>
+              <p>• Motivational Speaking & Workshops</p>
+              <p>• Authentic Leadership Development</p>
+              <p>• Personal Growth Coaching</p>
+              <p>• Truth-Based Storytelling Training</p>
             </div>
             
             <Button 
               onClick={scrollToLicensing}
               className="bg-brand-gold hover:bg-brand-gold/80 text-brand-black font-bold px-8 py-4 text-lg hover-glow"
             >
-              License Curriculum
+              Work With Me
             </Button>
           </div>
           
           <div className="animate-slide-in-right">
-            <img 
-              src="/lovable-uploads/7e36aae4-36b1-4d0d-9836-a57bd1410062.png" 
-              alt="From Fake to Free: The Realest Mindset Reset curriculum"
-              className="w-full max-w-md mx-auto shadow-2xl border-glow rounded-lg"
-            />
+            <div className="w-full max-w-md mx-auto p-8 bg-gradient-to-br from-brand-red/20 to-brand-gold/20 rounded-lg border border-brand-gold/30">
+              <h4 className="font-playfair text-2xl text-brand-white mb-4 text-center">My Mission</h4>
+              <p className="text-brand-white/90 text-center leading-relaxed">
+                To help you transform your reality while staying authentically you. 
+                Growth doesn't mean losing yourself—it means becoming more of who you truly are.
+              </p>
+            </div>
           </div>
         </div>
       </div>

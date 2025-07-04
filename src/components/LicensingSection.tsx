@@ -12,7 +12,7 @@ const LicensingSection = () => {
     name: '',
     organization: '',
     location: '',
-    programType: '',
+    serviceType: '',
     message: ''
   });
   const { toast } = useToast();
@@ -21,12 +21,12 @@ const LicensingSection = () => {
     e.preventDefault();
     
     // Create mailto link
-    const subject = encodeURIComponent('Curriculum Licensing Inquiry');
+    const subject = encodeURIComponent('Transformational Consulting Inquiry');
     const body = encodeURIComponent(`
 Name: ${formData.name}
 Organization: ${formData.organization}
 Location: ${formData.location}
-Program Type: ${formData.programType}
+Service Type: ${formData.serviceType}
 
 Message:
 ${formData.message}
@@ -36,7 +36,7 @@ ${formData.message}
     
     toast({
       title: "Inquiry Sent!",
-      description: "Your licensing inquiry has been prepared. Please send the email to complete your request.",
+      description: "Your consultation inquiry has been prepared. Please send the email to complete your request.",
     });
     
     // Reset form
@@ -44,7 +44,7 @@ ${formData.message}
       name: '',
       organization: '',
       location: '',
-      programType: '',
+      serviceType: '',
       message: ''
     });
   };
@@ -60,13 +60,13 @@ ${formData.message}
     <section id="licensing" className="py-20 bg-brand-black">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto">
-          <Card className="bg-gray-900/50 border-brand-red/30">
+          <Card className="bg-gray-900/50 border-brand-gold/30">
             <CardHeader className="text-center">
               <CardTitle className="font-playfair text-2xl md:text-3xl text-brand-white">
-                License "From Fake to Free"
+                Work With Amber
               </CardTitle>
               <CardDescription className="text-brand-white/80 text-lg">
-                Transform your program with trauma-informed curriculum designed for real change.
+                Ready to transform your life or organization while staying authentically you?
               </CardDescription>
             </CardHeader>
             
@@ -77,18 +77,17 @@ ${formData.message}
                     placeholder="Your Name"
                     value={formData.name}
                     onChange={(e) => handleInputChange('name', e.target.value)}
-                    className="bg-brand-black/50 border-brand-red/30 text-brand-white placeholder:text-brand-white/50"
+                    className="bg-brand-black/50 border-brand-gold/30 text-brand-white placeholder:text-brand-white/50"
                     required
                   />
                 </div>
                 
                 <div>
                   <Input
-                    placeholder="Organization Name"
+                    placeholder="Organization Name (if applicable)"
                     value={formData.organization}
                     onChange={(e) => handleInputChange('organization', e.target.value)}
-                    className="bg-brand-black/50 border-brand-red/30 text-brand-white placeholder:text-brand-white/50"
-                    required
+                    className="bg-brand-black/50 border-brand-gold/30 text-brand-white placeholder:text-brand-white/50"
                   />
                 </div>
                 
@@ -97,42 +96,42 @@ ${formData.message}
                     placeholder="Location (City, State)"
                     value={formData.location}
                     onChange={(e) => handleInputChange('location', e.target.value)}
-                    className="bg-brand-black/50 border-brand-red/30 text-brand-white placeholder:text-brand-white/50"
+                    className="bg-brand-black/50 border-brand-gold/30 text-brand-white placeholder:text-brand-white/50"
                     required
                   />
                 </div>
                 
                 <div>
-                  <Select onValueChange={(value) => handleInputChange('programType', value)} required>
-                    <SelectTrigger className="bg-brand-black/50 border-brand-red/30 text-brand-white">
-                      <SelectValue placeholder="Type of Program" />
+                  <Select onValueChange={(value) => handleInputChange('serviceType', value)} required>
+                    <SelectTrigger className="bg-brand-black/50 border-brand-gold/30 text-brand-white">
+                      <SelectValue placeholder="Type of Service" />
                     </SelectTrigger>
-                    <SelectContent className="bg-gray-900 border-brand-red/30">
-                      <SelectItem value="school" className="text-brand-white hover:bg-brand-red/20">Educational Institution</SelectItem>
-                      <SelectItem value="rehabilitation" className="text-brand-white hover:bg-brand-red/20">Rehabilitation Center</SelectItem>
-                      <SelectItem value="prison" className="text-brand-white hover:bg-brand-red/20">Prison/Correctional Facility</SelectItem>
-                      <SelectItem value="shelter" className="text-brand-white hover:bg-brand-red/20">Shelter/Transitional Housing</SelectItem>
-                      <SelectItem value="reentry" className="text-brand-white hover:bg-brand-red/20">Reentry Program</SelectItem>
-                      <SelectItem value="other" className="text-brand-white hover:bg-brand-red/20">Other</SelectItem>
+                    <SelectContent className="bg-gray-900 border-brand-gold/30">
+                      <SelectItem value="individual" className="text-brand-white hover:bg-brand-gold/20">Individual Consulting</SelectItem>
+                      <SelectItem value="speaking" className="text-brand-white hover:bg-brand-gold/20">Motivational Speaking</SelectItem>
+                      <SelectItem value="workshop" className="text-brand-white hover:bg-brand-gold/20">Workshop/Training</SelectItem>
+                      <SelectItem value="coaching" className="text-brand-white hover:bg-brand-gold/20">Life Coaching</SelectItem>
+                      <SelectItem value="storytelling" className="text-brand-white hover:bg-brand-gold/20">Storytelling Training</SelectItem>
+                      <SelectItem value="other" className="text-brand-white hover:bg-brand-gold/20">Other</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
                 
                 <div>
                   <Textarea
-                    placeholder="Tell us about your program and how you'd like to use the curriculum..."
+                    placeholder="Tell me about your goals and how I can help you stay true to yourself while achieving transformation..."
                     value={formData.message}
                     onChange={(e) => handleInputChange('message', e.target.value)}
-                    className="bg-brand-black/50 border-brand-red/30 text-brand-white placeholder:text-brand-white/50 min-h-32"
+                    className="bg-brand-black/50 border-brand-gold/30 text-brand-white placeholder:text-brand-white/50 min-h-32"
                     required
                   />
                 </div>
                 
                 <Button 
                   type="submit"
-                  className="w-full bg-brand-red hover:bg-brand-red/80 text-brand-white font-bold py-4 text-lg hover-glow"
+                  className="w-full bg-brand-gold hover:bg-brand-gold/80 text-brand-black font-bold py-4 text-lg hover-glow"
                 >
-                  Send Licensing Inquiry
+                  Start Your Transformation Journey
                 </Button>
               </form>
               

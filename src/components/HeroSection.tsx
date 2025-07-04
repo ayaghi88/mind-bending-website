@@ -1,4 +1,6 @@
+
 import { Button } from '@/components/ui/button';
+
 const HeroSection = () => {
   const scrollToBook = () => {
     const element = document.getElementById('book');
@@ -8,39 +10,41 @@ const HeroSection = () => {
       });
     }
   };
-  return <section id="hero" className="min-h-screen flex items-center justify-center hero-gradient relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('/lovable-uploads/793adc00-0913-4d1c-8330-5be68b0fa4cb.png')] bg-cover bg-center opacity-20"></div>
-      
+
+  return (
+    <section id="hero" className="min-h-screen flex items-center justify-center hero-gradient relative overflow-hidden">      
       <div className="container mx-auto px-4 z-10 relative">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="font-playfair font-black text-4xl md:text-6xl lg:text-7xl text-brand-white mb-6 animate-fade-in text-shadow-glow">
-            Bend your reality before it bends you.
+            Transform Your Reality, Stay True to You.
           </h1>
           
           <div className="mb-8 animate-slide-in-left">
             <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl text-brand-gold mb-4">
-              Mind Bending: The Quantum Reality Strategist
+              Motivational & Transformational Consulting
             </h2>
-            <p className="text-brand-red font-bold text-lg md:text-xl">
-              — Out Now
+            <p className="text-brand-white font-bold text-lg md:text-xl">
+              Speaking Life Into Your Authentic Journey
             </p>
           </div>
 
           <div className="animate-slide-in-right">
-            <Button onClick={() => window.open('https://www.lulu.com/shop/amber-yaghi/mind-bending-the-quantum-reality-strategist/paperback/product-45ympe6.html?page=1&pageSize=4&fbclid=PAQ0xDSwLBTctleHRuA2FlbQIxMQABp1HiuN2i5D44l3qRisORNdFhumGI5tNJh8Hh7KaanDlaFmo-LvRJ1kHo4sYf_aem_1S9f3Shgwmr7rToRCCYqhQ', '_blank')} className="bg-brand-red hover:bg-brand-red/80 text-brand-white font-bold px-8 py-4 text-lg hover-glow border-2 border-brand-red">
-              Buy the Book
+            <Button onClick={() => window.open('https://www.lulu.com/shop/amber-yaghi/mind-bending-the-quantum-reality-strategist/paperback/product-45ympe6.html?page=1&pageSize=4&fbclid=PAQ0xDSwLBTctleHRuA2FlbQIxMQABp1HiuN2i5D44l3qRisORNdFhumGI5tNJh8Hh7KaanDlaFmo-LvRJ1kHo4sYf_aem_1S9f3Shgwmr7rToRCCYqhQ', '_blank')} className="bg-brand-red hover:bg-brand-red/80 text-brand-white font-bold px-8 py-4 text-lg hover-glow border-2 border-brand-red mr-4">
+              Get Mind Bending
             </Button>
           </div>
         </div>
       </div>
 
-      {/* Floating Quote */}
+      {/* Inspiring Quote */}
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 max-w-2xl mx-auto px-4 animate-fade-in">
         <blockquote className="text-center">
-          <p className="text-brand-white italic text-sm md:text-base opacity-80">"That's awesome. Look at God! Everything happens at the right time in his timing. I have always saw so much in you, but ya'll have always believed in me, too"</p>
-          <footer className="text-brand-gold text-sm mt-2">— Laura Yaghi</footer>
+          <p className="text-brand-white italic text-sm md:text-base opacity-80">"Aim for betterment without losing sight of who you are. Your authentic self is your greatest strength."</p>
+          <footer className="text-brand-gold text-sm mt-2">— Amber Yaghi</footer>
         </blockquote>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default HeroSection;

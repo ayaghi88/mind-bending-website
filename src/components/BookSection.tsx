@@ -8,7 +8,7 @@ const BookSection = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="animate-slide-in-left">
             <img 
-              src="/lovable-uploads/793adc00-0913-4d1c-8330-5be68b0fa4cb.png" 
+              src="/lovable-uploads/306fefdf-2cf7-4ab6-a6b2-755e7339112a.png" 
               alt="Mind Bending: The Quantum Reality Strategist by Amber Yaghi"
               className="w-full max-w-md mx-auto shadow-2xl border-glow rounded-lg"
             />
@@ -23,12 +23,13 @@ const BookSection = () => {
             </h3>
             
             <p className="text-brand-white text-lg mb-6 leading-relaxed">
-              This isn't self-help. This is <span className="text-brand-red font-bold">Self-Wake-Up</span>.
+              Transform your reality while staying authentically <span className="text-brand-red font-bold">YOU</span>.
             </p>
             
             <p className="text-brand-white/80 mb-8 leading-relaxed">
-              Amber fuses metaphysics with street smarts, and quantum concepts with raw lived truth. 
-              A revolutionary approach to reality manipulation that challenges everything you think you know.
+              Amber combines quantum concepts with practical wisdom, helping you create positive change 
+              without compromising your authentic self. A revolutionary approach to personal transformation 
+              that honors who you truly are.
             </p>
             
             <div className="space-y-4 mb-8">

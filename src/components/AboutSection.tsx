@@ -1,4 +1,5 @@
 
+
 const AboutSection = () => {
   return (
     <section id="about" className="py-20 bg-brand-black relative">      
@@ -27,10 +28,14 @@ const AboutSection = () => {
                 I'm loud, transparent, and true to myself because I refuse to let anyone force me into a box to fit an algorithm. 
                 <span className="text-brand-gold font-semibold"> I control the algorithm because I am the algorithm.</span>
               </p>
-              <p className="text-brand-white/90 text-base leading-relaxed">
+              <p className="text-brand-white/90 text-base leading-relaxed mb-4">
                 Writing was my first love, and I'm multi-passionate by nature. I use writing and tech to reach my happy place, 
                 and now I use my real lived experience to empower the unseen, overlooked, and forgotten about. 
                 If I can break barriers while staying authentically me, so can you.
+              </p>
+              <p className="text-brand-white/90 text-base leading-relaxed">
+                Once I learned mind-bending, I realized I control my entire reality. Now I aim to inspire others who struggle to be true to themselves 
+                out of fear of being judged or disqualified. <span className="text-brand-gold font-semibold">Anything you want is yours if you're bold enough to go and get it!</span>
               </p>
             </div>
             

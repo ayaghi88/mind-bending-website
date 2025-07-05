@@ -2,8 +2,8 @@
 import { Button } from '@/components/ui/button';
 
 const CurriculumSection = () => {
-  const scrollToLicensing = () => {
-    const element = document.getElementById('licensing');
+  const scrollToContact = () => {
+    const element = document.getElementById('contact');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -26,7 +26,7 @@ const CurriculumSection = () => {
             </p>
             
             <p className="text-brand-white/80 mb-6 leading-relaxed">
-              Perfect for individuals, organizations, schools, and communities ready to embrace positive change. 
+              Perfect for individuals and organizations ready to embrace positive change. 
               My approach helps you aim for betterment without losing sight of who you truly are.
             </p>
             
@@ -39,7 +39,7 @@ const CurriculumSection = () => {
             </div>
             
             <Button 
-              onClick={scrollToLicensing}
+              onClick={scrollToContact}
               className="bg-brand-gold hover:bg-brand-gold/80 text-brand-black font-bold px-8 py-4 text-lg hover-glow"
             >
               Work With Me

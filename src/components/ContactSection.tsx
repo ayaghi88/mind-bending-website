@@ -61,7 +61,7 @@ ${formData.message}
               Ready to Transform?
             </h2>
             <p className="text-brand-white/80 text-lg animate-slide-in-left">
-              Let's connect about speaking engagements, collaborations, or licensing opportunities.
+              Let's connect about speaking engagements, collaborations, or consultation opportunities.
             </p>
           </div>
           
@@ -139,18 +139,18 @@ ${formData.message}
                 </div>
                 
                 <div>
-                  <h3 className="font-playfair text-xl text-brand-white mb-4">Curriculum Licensing</h3>
+                  <h3 className="font-playfair text-xl text-brand-white mb-4">Personal Consulting</h3>
                   <p className="text-brand-white/80 leading-relaxed">
-                    Implement "From Fake to Free" in your educational, rehabilitation, or 
-                    correctional program to create lasting change.
+                    Work one-on-one with Amber to unlock your authentic potential and create 
+                    lasting positive transformation in your life.
                   </p>
                 </div>
                 
                 <div>
                   <h3 className="font-playfair text-xl text-brand-white mb-4">Collaborations</h3>
                   <p className="text-brand-white/80 leading-relaxed">
-                    Partner with Soul Tech Systems for innovative approaches to trauma-informed 
-                    education and consciousness work.
+                    Partner with Amber for innovative approaches to motivational storytelling 
+                    and authentic personal development.
                   </p>
                 </div>
                 

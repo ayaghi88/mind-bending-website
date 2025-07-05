@@ -1,5 +1,4 @@
 
-
 const AboutSection = () => {
   return (
     <section id="about" className="py-20 bg-brand-black relative">      
@@ -91,4 +90,3 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
-

@@ -29,7 +29,7 @@ Message:
 ${formData.message}
     `);
     
-    window.location.href = `mailto:collab@amberyaghi.org?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:amber@amberyaghi.org?subject=${subject}&body=${body}`;
     
     toast({
       title: "Message Prepared!",

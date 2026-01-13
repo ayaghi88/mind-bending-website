@@ -2,8 +2,8 @@
 import { Button } from '@/components/ui/button';
 
 const HeroSection = () => {
-  const scrollToBook = () => {
-    const element = document.getElementById('book');
+  const scrollToContact = () => {
+    const element = document.getElementById('contact');
     if (element) {
       element.scrollIntoView({
         behavior: 'smooth'
@@ -29,8 +29,8 @@ const HeroSection = () => {
           </div>
 
           <div className="animate-slide-in-right">
-            <Button onClick={() => window.open('https://www.lulu.com/shop/amber-yaghi/mind-bending-the-quantum-reality-strategist/paperback/product-45ympe6.html?page=1&pageSize=4&fbclid=PAQ0xDSwLBTctleHRuA2FlbQIxMQABp1HiuN2i5D44l3qRisORNdFhumGI5tNJh8Hh7KaanDlaFmo-LvRJ1kHo4sYf_aem_1S9f3Shgwmr7rToRCCYqhQ', '_blank')} className="bg-brand-red hover:bg-brand-red/80 text-brand-white font-bold px-8 py-4 text-lg hover-glow border-2 border-brand-red mr-4">
-              Get Mind Bending
+            <Button onClick={scrollToContact} className="bg-brand-red hover:bg-brand-red/80 text-brand-white font-bold px-8 py-4 text-lg hover-glow border-2 border-brand-red">
+              Work With Me
             </Button>
           </div>
         </div>

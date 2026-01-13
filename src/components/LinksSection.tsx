@@ -21,8 +21,8 @@ const LinksSection = () => {
       icon: Book,
     },
     {
-      title: "Media Kit",
-      description: "Download my press kit and resources",
+      title: "Free 21-Day Journal",
+      description: "Download your Quantum Reality Master Journal",
       url: "https://drive.google.com/file/d/1XPJAP-qpdzN14vX9DWzW1Y1lQaPzPTnv/view?usp=drivesdk",
       icon: FileText,
     },

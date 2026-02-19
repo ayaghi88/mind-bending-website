@@ -46,7 +46,7 @@ const Footer = () => {
 
         <div className="border-t border-border pt-6 text-center text-brand-white/40 text-sm">
           <p>Publishing • Apps • Speaking • Contact</p>
-          <p className="mt-1">&copy; {new Date().getFullYear()} Amber Yaghi. All rights reserved. Soul Tech Systems</p>
+          <p className="mt-1">&copy; {new Date().getFullYear()} Amber Yaghi. All rights reserved.</p>
         </div>
       </div>
     </footer>

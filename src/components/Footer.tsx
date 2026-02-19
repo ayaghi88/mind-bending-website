@@ -14,7 +14,7 @@ const Footer = () => {
         >
           <div>
             <h3 className="font-playfair font-bold text-xl text-brand-white mb-2">AMBER YAGHI</h3>
-            <p className="text-brand-red text-sm mb-4">Publisher • Creator • Technologist • Speaker</p>
+            <p className="text-brand-red text-sm mb-4">Author • Publisher • Creator • Technologist • Speaker</p>
             <p className="text-brand-white/60 text-sm">
               Ethical, transparent publishing and digital services for authors and thought leaders.
             </p>

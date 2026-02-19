@@ -30,6 +30,7 @@ const Navigation = () => {
     { label: 'DNS & Tech Setup', path: '/dns-tech' },
     { label: 'Books', path: '/books' },
     { label: 'Speaking & Media', path: '/speaking' },
+    { label: 'Reviews', path: '/reviews' },
     { label: 'Contact', path: '/contact' },
   ];
 

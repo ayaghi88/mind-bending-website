@@ -3,15 +3,15 @@ import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center hero-gradient relative overflow-hidden">
+    <section id="hero" className="min-h-screen flex flex-col items-center justify-center hero-gradient relative overflow-hidden py-24 pb-32">
       <div className="container mx-auto px-4 z-10 relative">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="font-playfair font-black text-4xl md:text-6xl lg:text-7xl text-brand-white mb-6 animate-fade-in text-shadow-glow">
+          <h1 className="font-playfair font-black text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-brand-white mb-6 animate-fade-in text-shadow-glow">
             Build Ideas. Publish Authority. Create Impact.
           </h1>
 
           <div className="mb-10 animate-slide-in-left">
-            <p className="text-brand-white/80 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+            <p className="text-brand-white/90 text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
               Amber Yaghi offers professional publishing, app creation, and digital infrastructure services for authors, founders, and thought leaders — with transparent pricing and full ownership.
             </p>
           </div>
@@ -36,7 +36,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 max-w-2xl mx-auto px-4 animate-fade-in">
+      <div className="mt-12 max-w-2xl mx-auto px-4 animate-fade-in z-10">
         <blockquote className="text-center">
           <p className="text-brand-white italic text-sm md:text-base opacity-80">"Aim for betterment without losing sight of who you are. Your authentic self is your greatest strength."</p>
           <footer className="text-brand-gold text-sm mt-2">— Amber Yaghi</footer>

@@ -121,8 +121,8 @@ const Author = () => {
                 transition={{ duration: 0.6 }}
                 className="mb-20"
               >
-                <div className="grid md:grid-cols-3 gap-12 items-start">
-                  <div className="md:col-span-2 space-y-6 text-brand-white/75 leading-relaxed text-lg">
+                <div className="max-w-3xl mx-auto">
+                  <div className="space-y-6 text-brand-white/75 leading-relaxed text-lg">
                     <p>
                       Well into adulthood, whenever someone passed away, a classmate or old friend would reach out for me to write a poem for the person's obituary. I'd have it to them in no time, with the nicknames or special memories they'd requested I add. It made me feel worth something, to be able to author someone's going away poem or even be considered to do so!
                     </p>
@@ -143,13 +143,6 @@ const Author = () => {
                     </p>
                   </div>
 
-                  <div className="flex justify-center">
-                    <img
-                      src="/lovable-uploads/amber-portrait-1.jpeg"
-                      alt="Amber Yaghi"
-                      className="rounded-xl shadow-lg w-full max-w-[300px] object-cover"
-                    />
-                  </div>
                 </div>
               </motion.section>
 

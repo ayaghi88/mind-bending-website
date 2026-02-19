@@ -99,7 +99,7 @@ const Books = () => {
                   We'd love to hear your thoughts! Leave a review on your favorite platform or share your feedback directly.
                 </p>
                 <Button
-                  onClick={() => window.location.href = '/contact'}
+                  onClick={() => window.location.href = '/contact?review=true'}
                   className="bg-brand-red hover:bg-brand-red/90 text-white font-bold px-8 py-4 text-lg hover-glow"
                 >
                   Share Your Review →

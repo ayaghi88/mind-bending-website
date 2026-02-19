@@ -25,10 +25,10 @@ const handler = async (req: Request): Promise<Response> => {
   try {
     const { name, email, subject, message, services }: ContactEmailRequest & { services?: string[] } = await req.json();
 
-    // Send email to Amber (using verified email until domain is verified in Resend)
+    // Send email to Amber via verified domain
     const emailResponse = await resend.emails.send({
-      from: "Contact Form <onboarding@resend.dev>",
-      to: ["ambersamanthayaghi@gmail.com"],
+      from: "Amber Yaghi Website <contact@amberyaghi.org>",
+      to: ["amber@amberyaghi.org"],
       subject: subject || "New Contact Form Submission",
       html: `
         <h2>New Contact Form Submission</h2>

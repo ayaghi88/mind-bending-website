@@ -1,20 +1,31 @@
 
 import { Button } from '@/components/ui/button';
+import { motion } from 'framer-motion';
 
 const BookSection = () => {
   return (
     <section id="book" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="animate-slide-in-left">
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
             <img 
               src="/lovable-uploads/306fefdf-2cf7-4ab6-a6b2-755e7339112a.png" 
               alt="Mind Bending: The Quantum Reality Strategist by Amber Yaghi"
-              className="w-full max-w-md mx-auto shadow-2xl border-glow rounded-lg"
+              className="w-full max-w-md mx-auto shadow-2xl border-glow rounded-lg hover:scale-105 transition-transform duration-500"
             />
-          </div>
+          </motion.div>
           
-          <div className="animate-slide-in-right">
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+          >
             <h2 className="font-playfair font-bold text-3xl md:text-4xl text-brand-white mb-6">
               Mind Bending
             </h2>
@@ -47,7 +58,7 @@ const BookSection = () => {
             >
               Order on Lulu
             </Button>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

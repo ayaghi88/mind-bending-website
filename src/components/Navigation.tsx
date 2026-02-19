@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 const navItems = [
   { label: 'Home', path: '/' },
   { label: 'Author', path: '/author' },
-  { label: 'Published Works', path: '/books' },
+  { label: 'Books', path: '/books' },
   { label: 'Publishing Services', path: '/publishing' },
   { label: 'App Creation', path: '/apps' },
   { label: 'DNS & Tech Setup', path: '/dns-tech' },

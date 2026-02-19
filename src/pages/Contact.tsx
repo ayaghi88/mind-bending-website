@@ -131,8 +131,11 @@ const Contact = () => {
                 <div className="animate-slide-in-right space-y-8">
                   <div>
                     <h3 className="font-playfair text-xl text-brand-white mb-3">Direct Contact</h3>
-                    <a href="mailto:amber@amberyaghi.org" className="text-brand-red hover:underline transition-colors text-lg">
+                    <a href="mailto:amber@amberyaghi.org" className="text-brand-red hover:underline transition-colors text-lg block">
                       amber@amberyaghi.org
+                    </a>
+                    <a href="mailto:contact@amberyaghi.org" className="text-brand-red hover:underline transition-colors text-lg block">
+                      contact@amberyaghi.org
                     </a>
                   </div>
                   <div>

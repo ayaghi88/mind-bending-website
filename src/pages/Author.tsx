@@ -94,6 +94,25 @@ const Author = () => {
                 </motion.div>
               </div>
 
+              {/* Video */}
+              <motion.section
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="mb-20"
+              >
+                <div className="max-w-2xl mx-auto">
+                  <video
+                    src="/lovable-uploads/amber-video.mp4"
+                    controls
+                    playsInline
+                    className="w-full rounded-xl shadow-lg"
+                    poster="/lovable-uploads/amber-portrait-2.jpeg"
+                  />
+                </div>
+              </motion.section>
+
               {/* Full Bio */}
               <motion.section
                 initial={{ opacity: 0, y: 30 }}

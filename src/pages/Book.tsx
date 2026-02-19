@@ -1,4 +1,4 @@
-import Navigation from '@/components/Navigation';
+import PageLayout from '@/components/PageLayout';
 import BookSection from '@/components/BookSection';
 import Footer from '@/components/Footer';
 import { Helmet } from 'react-helmet-async';
@@ -11,13 +11,14 @@ const Book = () => {
         <meta name="description" content="Discover Mind Bending by Amber Yaghi - a transformational guide to breaking free from limiting beliefs and unlocking your authentic potential." />
         <link rel="canonical" href="https://amberyaghi.org/book" />
       </Helmet>
-      <div className="min-h-screen bg-brand-black">
-        <Navigation />
-        <div className="pt-20">
-          <BookSection />
+      <PageLayout>
+        <div className="min-h-screen bg-brand-black">
+          <div className="pt-6 lg:pt-8">
+            <BookSection />
+          </div>
+          <Footer />
         </div>
-        <Footer />
-      </div>
+      </PageLayout>
     </>
   );
 };

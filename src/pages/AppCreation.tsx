@@ -69,6 +69,33 @@ const AppCreation = () => {
                 </div>
               </div>
 
+              {/* Featured App: AI Academy for Kids */}
+              <div className="bg-white border border-border rounded-lg p-8 mb-12 shadow-sm">
+                <h2 className="font-playfair font-bold text-2xl md:text-3xl text-brand-white mb-6">
+                  Featured App: AI Academy for Kids
+                </h2>
+                <div className="grid md:grid-cols-2 gap-8 items-center">
+                  <div>
+                    <img
+                      src="/lovable-uploads/ai-academy-screenshot.jpeg"
+                      alt="AI Academy for Kids — Learn AI through stories, games, and projects"
+                      className="w-full max-w-sm mx-auto rounded-lg shadow-2xl border-glow"
+                    />
+                  </div>
+                  <div>
+                    <p className="text-brand-white/70 text-lg leading-relaxed mb-4">
+                      An AI academy for curious kids ages 7–16! Learn how Artificial Intelligence works through magical adventures with Scout the robot and friends — featuring stories, games, and projects.
+                    </p>
+                    <Button
+                      onClick={() => window.open('https://ai-academy.me', '_blank')}
+                      className="bg-brand-red hover:bg-brand-red/90 text-white font-bold px-6 py-3 hover-glow"
+                    >
+                      Visit AI Academy →
+                    </Button>
+                  </div>
+                </div>
+              </div>
+
               <div className="bg-brand-black border border-border rounded-lg p-6 mb-8">
                 <p className="text-brand-white/60 text-center italic">
                   We'd love to hear your feedback! If you've used Lovable Learner or any of our apps, please share your review or suggestions.

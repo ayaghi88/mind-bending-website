@@ -1,4 +1,4 @@
-import { ExternalLink, Book, Calendar, FileText, Link2, Github, Heart, Award } from 'lucide-react';
+import { ExternalLink, Book, Calendar, FileText, Link2, Github, Heart, Award, GraduationCap } from 'lucide-react';
 
 const LinksSection = () => {
   const links = [
@@ -37,6 +37,12 @@ const LinksSection = () => {
       description: "Help amplify a voice that inspires change!",
       url: "https://speaker-nominations.ted.com",
       icon: Award,
+    },
+    {
+      title: "AI Academy for Kids",
+      description: "Learn AI through stories, games & projects — ages 7–16",
+      url: "https://ai-academy.me",
+      icon: GraduationCap,
     },
   ];
 

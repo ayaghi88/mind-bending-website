@@ -97,6 +97,60 @@ const AppCreation = () => {
                 </div>
               </div>
 
+              {/* Featured App: Shrink & Send */}
+              <div className="bg-white border border-border rounded-lg p-8 mb-12 shadow-sm">
+                <h2 className="font-playfair font-bold text-2xl md:text-3xl text-brand-white mb-6">
+                  Featured App: Shrink & Send
+                </h2>
+                <div className="grid md:grid-cols-2 gap-8 items-center">
+                  <div>
+                    <img
+                      src="/lovable-uploads/shrinkandsend-screenshot.jpeg"
+                      alt="Shrink & Send — Professional file compression and delivery"
+                      className="w-full max-w-sm mx-auto rounded-lg shadow-2xl border-glow"
+                    />
+                  </div>
+                  <div>
+                    <p className="text-brand-white/70 text-lg leading-relaxed mb-4">
+                      Professional delivery made simple. Compress multiple files and deliver them via secure email — without ever shrinking your standards.
+                    </p>
+                    <Button
+                      onClick={() => window.open('https://www.shrinkandsend.com', '_blank')}
+                      className="bg-brand-red hover:bg-brand-red/90 text-white font-bold px-6 py-3 hover-glow"
+                    >
+                      Visit Shrink & Send →
+                    </Button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Featured App: Text Detox Alchemy */}
+              <div className="bg-white border border-border rounded-lg p-8 mb-12 shadow-sm">
+                <h2 className="font-playfair font-bold text-2xl md:text-3xl text-brand-white mb-6">
+                  Featured App: Text Detox™
+                </h2>
+                <div className="grid md:grid-cols-2 gap-8 items-center">
+                  <div>
+                    <img
+                      src="/lovable-uploads/textdetox-screenshot.jpeg"
+                      alt="Text Detox — Clean, format, and export your text"
+                      className="w-full max-w-sm mx-auto rounded-lg shadow-2xl border-glow"
+                    />
+                  </div>
+                  <div>
+                    <p className="text-brand-white/70 text-lg leading-relaxed mb-4">
+                      Transform your messy text into clean, publishing-ready content. Clean up, auto-format, and quick export in seconds.
+                    </p>
+                    <Button
+                      onClick={() => window.open('https://www.textdetoxalchemy.com', '_blank')}
+                      className="bg-brand-red hover:bg-brand-red/90 text-white font-bold px-6 py-3 hover-glow"
+                    >
+                      Visit Text Detox →
+                    </Button>
+                  </div>
+                </div>
+              </div>
+
               {/* GitHub Sponsor Card */}
               <div className="bg-white border border-border rounded-lg p-8 mb-12 shadow-sm flex flex-col items-center">
                 <h2 className="font-playfair font-bold text-2xl md:text-3xl text-brand-white mb-6">

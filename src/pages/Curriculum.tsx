@@ -1,4 +1,4 @@
-import Navigation from '@/components/Navigation';
+import PageLayout from '@/components/PageLayout';
 import CurriculumSection from '@/components/CurriculumSection';
 import Footer from '@/components/Footer';
 import { Helmet } from 'react-helmet-async';
@@ -11,13 +11,14 @@ const Curriculum = () => {
         <meta name="description" content="Join Amber Yaghi's From Fake to Free program - motivational storytelling that empowers transformation and authentic living." />
         <link rel="canonical" href="https://amberyaghi.org/curriculum" />
       </Helmet>
-      <div className="min-h-screen bg-brand-black">
-        <Navigation />
-        <div className="pt-20">
-          <CurriculumSection />
+      <PageLayout>
+        <div className="min-h-screen bg-brand-black">
+          <div className="pt-6 lg:pt-8">
+            <CurriculumSection />
+          </div>
+          <Footer />
         </div>
-        <Footer />
-      </div>
+      </PageLayout>
     </>
   );
 };

@@ -28,10 +28,16 @@ const LinksSection = () => {
       icon: FileText,
     },
     {
-      title: "GitHub Sponsor",
-      description: "Support my open source work on GitHub",
-      url: "https://github.com/sponsors/ayaghi88",
+      title: "GitHub",
+      description: "Check out my projects and open source work",
+      url: "https://github.com/ayaghi88",
       icon: Github,
+    },
+    {
+      title: "Sponsor Me on GitHub",
+      description: "Support my open source work",
+      url: "https://github.com/sponsors/ayaghi88",
+      icon: Heart,
       isSponsor: true,
     },
     {

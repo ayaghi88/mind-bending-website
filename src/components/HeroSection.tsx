@@ -11,14 +11,14 @@ const HeroSection = () => {
           </h1>
 
           <div className="mb-10 animate-slide-in-left">
-            <p className="text-brand-white/90 text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+            <p className="text-brand-white/70 text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
               Amber Yaghi offers professional publishing, app creation, and digital infrastructure services for authors, founders, and thought leaders — with transparent pricing and full ownership.
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-in-right">
             <Link to="/publishing">
-              <Button className="bg-brand-red hover:bg-brand-red/80 text-brand-white font-bold px-8 py-4 text-lg hover-glow border-2 border-brand-red w-full sm:w-auto">
+              <Button className="bg-brand-red hover:bg-brand-red/90 text-white font-bold px-8 py-4 text-lg hover-glow w-full sm:w-auto">
                 Publish Your Book
               </Button>
             </Link>
@@ -38,7 +38,7 @@ const HeroSection = () => {
 
       <div className="mt-12 max-w-2xl mx-auto px-4 animate-fade-in z-10">
         <blockquote className="text-center">
-          <p className="text-brand-white italic text-sm md:text-base opacity-80">"Aim for betterment without losing sight of who you are. Your authentic self is your greatest strength."</p>
+          <p className="text-brand-white/60 italic text-sm md:text-base">"Aim for betterment without losing sight of who you are. Your authentic self is your greatest strength."</p>
           <footer className="text-brand-gold text-sm mt-2">— Amber Yaghi</footer>
         </blockquote>
       </div>

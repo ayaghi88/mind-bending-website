@@ -29,7 +29,8 @@ const Index = () => {
             "sameAs": [
               "https://facebook.com/authoramberyaghi",
               "https://tiktok.com/@authoramberyaghi",
-              "https://x.com/amber_yaghi"
+              "https://x.com/amber_yaghi",
+              "https://github.com/ayaghi88"
             ]
           })}
         </script>
@@ -40,7 +41,7 @@ const Index = () => {
         <BookSection />
 
         {/* Services Overview */}
-        <section className="py-20 bg-gradient-to-br from-brand-black to-secondary">
+        <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="font-playfair font-bold text-3xl md:text-4xl text-brand-white text-center mb-12">
               What I Offer
@@ -51,10 +52,10 @@ const Index = () => {
                 { title: "App Creation", desc: "Custom apps and digital tools for authors, educators, and creators.", link: "/apps" },
                 { title: "Speaking & Media", desc: "Keynotes, panels, podcasts, and workshops on publishing, AI, and ownership.", link: "/speaking" },
               ].map((s) => (
-                <Link key={s.title} to={s.link} className="bg-secondary/50 border border-primary/20 rounded-lg p-6 hover:border-brand-red/50 transition-colors group">
+                <Link key={s.title} to={s.link} className="bg-brand-black border border-border rounded-lg p-6 hover:border-brand-red hover:shadow-md transition-all group">
                   <h3 className="font-playfair font-bold text-xl text-brand-white mb-3 group-hover:text-brand-red transition-colors">{s.title}</h3>
-                  <p className="text-brand-white/70 mb-4">{s.desc}</p>
-                  <span className="text-brand-gold text-sm font-semibold">Learn more →</span>
+                  <p className="text-brand-white/60 mb-4">{s.desc}</p>
+                  <span className="text-brand-red text-sm font-semibold">Learn more →</span>
                 </Link>
               ))}
             </div>
@@ -67,11 +68,11 @@ const Index = () => {
             <h2 className="font-playfair font-bold text-2xl md:text-3xl text-brand-white mb-4">
               Share Your Experience
             </h2>
-            <p className="text-brand-white/70 text-lg mb-6 max-w-2xl mx-auto">
+            <p className="text-brand-white/60 text-lg mb-6 max-w-2xl mx-auto">
               Have you read Mind Bending, used Lovable Learner, or worked with Amber? We'd love to hear your review and feedback.
             </p>
             <Link to="/contact">
-              <Button className="bg-brand-red hover:bg-brand-red/80 text-brand-white font-bold px-8 py-4 text-lg hover-glow border-2 border-brand-red">
+              <Button className="bg-brand-red hover:bg-brand-red/90 text-white font-bold px-8 py-4 text-lg hover-glow">
                 Leave a Review →
               </Button>
             </Link>

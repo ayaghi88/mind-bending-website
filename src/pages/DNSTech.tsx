@@ -28,23 +28,23 @@ const DNSTech = () => {
                 DNS & Technical Setup
               </h1>
 
-              <p className="text-brand-white/80 text-lg md:text-xl leading-relaxed mb-12 animate-slide-in-left">
+              <p className="text-brand-white/70 text-lg md:text-xl leading-relaxed mb-12 animate-slide-in-left">
                 Amber Yaghi offers technical setup services to help creators and businesses establish a reliable digital foundation.
               </p>
 
               <div className="grid md:grid-cols-2 gap-6 mb-12">
                 {services.map((item) => (
-                  <div key={item.title} className="bg-secondary/50 border border-primary/20 rounded-lg p-6 animate-fade-in">
+                  <div key={item.title} className="bg-white border border-border rounded-lg p-6 shadow-sm animate-fade-in">
                     <item.icon className="w-8 h-8 text-brand-gold mb-4" />
                     <h3 className="font-playfair font-bold text-xl text-brand-white mb-2">{item.title}</h3>
-                    <p className="text-brand-white/70">{item.desc}</p>
+                    <p className="text-brand-white/60">{item.desc}</p>
                   </div>
                 ))}
               </div>
 
               <Button
                 onClick={() => window.location.href = '/contact'}
-                className="bg-brand-red hover:bg-brand-red/80 text-brand-white font-bold px-8 py-4 text-lg hover-glow border-2 border-brand-red"
+                className="bg-brand-red hover:bg-brand-red/90 text-white font-bold px-8 py-4 text-lg hover-glow"
               >
                 Request DNS Setup →
               </Button>

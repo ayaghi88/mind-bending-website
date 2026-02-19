@@ -37,7 +37,7 @@ const Books = () => {
               <h1 className="font-playfair font-black text-4xl md:text-5xl lg:text-6xl text-brand-white mb-6 animate-fade-in">
                 Books by Amber Yaghi
               </h1>
-              <p className="text-brand-white/80 text-lg md:text-xl leading-relaxed mb-12 animate-slide-in-left">
+              <p className="text-brand-white/70 text-lg md:text-xl leading-relaxed mb-12 animate-slide-in-left">
                 Explore published works focused on insight, clarity, and intellectual ownership.
               </p>
 
@@ -59,7 +59,7 @@ const Books = () => {
                     The Quantum Reality Strategist
                   </h3>
 
-                  <p className="text-brand-white/80 mb-6 leading-relaxed text-lg">
+                  <p className="text-brand-white/70 mb-6 leading-relaxed text-lg">
                     Transform your reality while staying authentically <span className="text-brand-red font-bold">YOU</span>.
                     Amber combines quantum concepts with practical wisdom, helping you create positive change
                     without compromising your authentic self.
@@ -80,7 +80,7 @@ const Books = () => {
                         key={r.name}
                         variant="outline"
                         onClick={() => window.open(r.url, '_blank')}
-                        className="border-brand-red/50 text-brand-white hover:bg-brand-red/20"
+                        className="border-brand-red/50 text-brand-white hover:bg-brand-red/10"
                       >
                         {r.name}
                       </Button>
@@ -90,17 +90,17 @@ const Books = () => {
               </div>
 
               {/* Review Request */}
-              <div className="bg-gradient-to-br from-secondary to-brand-black border border-brand-gold/30 rounded-lg p-8 text-center">
+              <div className="bg-white border border-border rounded-lg p-8 text-center shadow-sm">
                 <Star className="w-8 h-8 text-brand-gold mx-auto mb-4" />
                 <h3 className="font-playfair font-bold text-2xl text-brand-white mb-4">
                   Have you read Mind Bending?
                 </h3>
-                <p className="text-brand-white/70 text-lg mb-6">
+                <p className="text-brand-white/60 text-lg mb-6">
                   We'd love to hear your thoughts! Leave a review on your favorite platform or share your feedback directly.
                 </p>
                 <Button
                   onClick={() => window.location.href = '/contact'}
-                  className="bg-brand-red hover:bg-brand-red/80 text-brand-white font-bold px-8 py-4 text-lg hover-glow border-2 border-brand-red"
+                  className="bg-brand-red hover:bg-brand-red/90 text-white font-bold px-8 py-4 text-lg hover-glow"
                 >
                   Share Your Review →
                 </Button>

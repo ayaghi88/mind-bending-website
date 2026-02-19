@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 
 const BookSection = () => {
   return (
-    <section id="book" className="py-20 bg-brand-black">
+    <section id="book" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="animate-slide-in-left">
@@ -26,7 +26,7 @@ const BookSection = () => {
               Transform your reality while staying authentically <span className="text-brand-red font-bold">YOU</span>.
             </p>
             
-            <p className="text-brand-white/80 mb-8 leading-relaxed">
+            <p className="text-brand-white/70 mb-8 leading-relaxed">
               Amber combines quantum concepts with practical wisdom, helping you create positive change 
               without compromising your authentic self. A revolutionary approach to personal transformation 
               that honors who you truly are.
@@ -42,7 +42,7 @@ const BookSection = () => {
             </div>
             
             <Button 
-              className="bg-brand-red hover:bg-brand-red/80 text-brand-white font-bold px-8 py-4 text-lg hover-glow border-2 border-brand-red"
+              className="bg-brand-red hover:bg-brand-red/90 text-white font-bold px-8 py-4 text-lg hover-glow"
               onClick={() => window.open('https://www.lulu.com/shop/amber-yaghi/mind-bending-the-quantum-reality-strategist/paperback/product-45ympe6.html?page=1&pageSize=4&fbclid=PAQ0xDSwLBTctleHRuA2FlbQIxMQABp1HiuN2i5D44l3qRisORNdFhumGI5tNJh8Hh7KaanDlaFmo-LvRJ1kHo4sYf_aem_1S9f3Shgwmr7rToRCCYqhQ', '_blank')}
             >
               Order on Lulu

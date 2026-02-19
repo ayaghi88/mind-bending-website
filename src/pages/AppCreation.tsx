@@ -97,6 +97,20 @@ const AppCreation = () => {
                 </div>
               </div>
 
+              {/* GitHub Sponsor Card */}
+              <div className="bg-white border border-border rounded-lg p-8 mb-12 shadow-sm flex flex-col items-center">
+                <h2 className="font-playfair font-bold text-2xl md:text-3xl text-brand-white mb-6">
+                  Support My Work
+                </h2>
+                <iframe
+                  src="https://github.com/sponsors/ayaghi88/card"
+                  title="Sponsor ayaghi88"
+                  height="225"
+                  width="100%"
+                  style={{ border: 0, maxWidth: '600px' }}
+                />
+              </div>
+
               <div className="bg-brand-black border border-border rounded-lg p-6 mb-8">
                 <p className="text-brand-white/60 text-center italic">
                   We'd love to hear your feedback! If you've used Lovable Learner or any of our apps, please share your review or suggestions.

@@ -14,6 +14,7 @@ import Publishing from "./pages/Publishing";
 import AppCreation from "./pages/AppCreation";
 import DNSTech from "./pages/DNSTech";
 import Speaking from "./pages/Speaking";
+import Author from "./pages/Author";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -36,6 +37,7 @@ const App = () => (
             <Route path="/apps" element={<AppCreation />} />
             <Route path="/dns-tech" element={<DNSTech />} />
             <Route path="/speaking" element={<Speaking />} />
+            <Route path="/author" element={<Author />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

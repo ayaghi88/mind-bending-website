@@ -24,6 +24,7 @@ const Navigation = () => {
 
   const navItems = [
     { label: 'Home', path: '/' },
+    { label: 'Author', path: '/author' },
     { label: 'Publishing Services', path: '/publishing' },
     { label: 'App Creation', path: '/apps' },
     { label: 'DNS & Tech Setup', path: '/dns-tech' },

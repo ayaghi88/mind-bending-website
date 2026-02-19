@@ -28,11 +28,11 @@ const Navigation = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-brand-black/95 backdrop-blur-sm border-b border-brand-red/20' : 'bg-transparent'
+      isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-sm border-b border-border' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="font-playfair font-bold text-xl text-brand-white hover:text-brand-gold transition-colors">
+          <Link to="/" className="font-playfair font-bold text-xl text-brand-white hover:text-brand-red transition-colors">
             AMBER YAGHI
           </Link>
 
@@ -42,7 +42,7 @@ const Navigation = () => {
                 key={item.label}
                 to={item.path}
                 className={`text-sm transition-colors ${
-                  location.pathname === item.path ? 'text-brand-red' : 'text-brand-white hover:text-brand-red'
+                  location.pathname === item.path ? 'text-brand-red font-semibold' : 'text-brand-white/70 hover:text-brand-red'
                 }`}
               >
                 {item.label}
@@ -61,14 +61,14 @@ const Navigation = () => {
         </div>
 
         {isMobileMenuOpen && (
-          <div className="lg:hidden mt-4 pb-4 border-t border-brand-red/20">
+          <div className="lg:hidden mt-4 pb-4 border-t border-border">
             <div className="flex flex-col space-y-4 pt-4">
               {navItems.map((item) => (
                 <Link
                   key={item.label}
                   to={item.path}
                   className={`transition-colors text-left ${
-                    location.pathname === item.path ? 'text-brand-red' : 'text-brand-white hover:text-brand-red'
+                    location.pathname === item.path ? 'text-brand-red font-semibold' : 'text-brand-white/70 hover:text-brand-red'
                   }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >

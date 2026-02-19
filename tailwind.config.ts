@@ -53,11 +53,11 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				brand: {
-					black: '#000000',
-					red: '#FF0000',
-					white: '#FFFFFF',
-					gold: '#C9A86A'
+			brand: {
+					black: '#F8F9FA',
+					red: '#4285F4',
+					white: '#1A1A2E',
+					gold: '#34A853'
 				}
 			},
 			fontFamily: {

@@ -17,7 +17,7 @@ const AboutSection = () => {
                 transformational speaker, and author who specializes in helping people discover and fully own their true self and voice.
               </p>
               
-              <p className="text-brand-white/80 text-base md:text-lg mb-8 leading-relaxed">
+              <p className="text-brand-white/70 text-base md:text-lg mb-8 leading-relaxed">
                 Through powerful speaking engagements and authentic storytelling, Amber empowers individuals to embrace their 
                 authenticity without compromise. She teaches revolutionary approaches to using AI for healing and personal transformation, 
                 combining cutting-edge technology with timeless wisdom about self-discovery.
@@ -25,7 +25,7 @@ const AboutSection = () => {
               
               <div className="bg-brand-gold/10 border border-brand-gold/30 rounded-lg p-6 mb-8">
                 <h3 className="font-playfair text-xl text-brand-gold mb-4">Core Strengths & Expertise</h3>
-                <ul className="text-brand-white/90 space-y-3">
+                <ul className="text-brand-white/80 space-y-3">
                   <li className="flex items-start">
                     <span className="text-brand-gold mr-2">•</span>
                     <span><strong className="text-brand-gold">Mind-Bending Practice & Teaching:</strong> Helping others control their reality through consciousness work</span>
@@ -58,11 +58,11 @@ const AboutSection = () => {
           <div className="text-center mb-12">
             <div className="bg-brand-gold/10 border border-brand-gold/30 rounded-lg p-8 max-w-4xl mx-auto">
               <h3 className="font-playfair text-2xl text-brand-gold mb-6">My Mission: Authenticity & Transformation</h3>
-              <p className="text-brand-white/90 text-lg leading-relaxed mb-4">
+              <p className="text-brand-white/80 text-lg leading-relaxed mb-4">
                 As a Black and Arab practitioner, I bring unique perspectives to mind-bending and personal transformation. 
                 I've learned that <span className="text-brand-gold font-semibold">once you master mind-bending, you control your entire reality</span>.
               </p>
-              <p className="text-brand-white/90 text-lg leading-relaxed">
+              <p className="text-brand-white/80 text-lg leading-relaxed">
                 My work focuses on inspiring others who struggle to be true to themselves out of fear of judgment. 
                 Through speaking engagements, AI-assisted healing techniques, and authentic storytelling, I help people 
                 break free from limitations and <span className="text-brand-gold font-semibold">claim what's rightfully theirs when they're bold enough to pursue it</span>.

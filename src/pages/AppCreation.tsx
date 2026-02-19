@@ -28,22 +28,22 @@ const AppCreation = () => {
                 App Creation & Digital Products
               </h1>
 
-              <p className="text-brand-white/80 text-lg md:text-xl leading-relaxed mb-12 animate-slide-in-left">
+              <p className="text-brand-white/70 text-lg md:text-xl leading-relaxed mb-12 animate-slide-in-left">
                 Amber Yaghi designs and deploys custom applications and digital tools for authors, educators, and creators. Apps can be built as standalone products or as companions to books, courses, or speaking engagements.
               </p>
 
               <div className="grid md:grid-cols-2 gap-6 mb-12">
                 {useCases.map((item) => (
-                  <div key={item.title} className="bg-secondary/50 border border-primary/20 rounded-lg p-6 animate-fade-in">
+                  <div key={item.title} className="bg-white border border-border rounded-lg p-6 shadow-sm animate-fade-in">
                     <item.icon className="w-8 h-8 text-brand-red mb-4" />
                     <h3 className="font-playfair font-bold text-xl text-brand-white mb-2">{item.title}</h3>
-                    <p className="text-brand-white/70">{item.desc}</p>
+                    <p className="text-brand-white/60">{item.desc}</p>
                   </div>
                 ))}
               </div>
 
               {/* Featured App: Lovable Learner */}
-              <div className="bg-gradient-to-br from-secondary to-brand-black border border-brand-gold/30 rounded-lg p-8 mb-12">
+              <div className="bg-white border border-border rounded-lg p-8 mb-12 shadow-sm">
                 <h2 className="font-playfair font-bold text-2xl md:text-3xl text-brand-white mb-6">
                   Featured App: Lovable Learner
                 </h2>
@@ -56,12 +56,12 @@ const AppCreation = () => {
                     />
                   </div>
                   <div>
-                    <p className="text-brand-white/80 text-lg leading-relaxed mb-4">
+                    <p className="text-brand-white/70 text-lg leading-relaxed mb-4">
                       The 1st app tailored to teach neurodivergent people according to their specific learning needs. No walls of text — just clear, visual, step-by-step learning.
                     </p>
                     <Button
                       onClick={() => window.open('https://www.lovablelearner.com', '_blank')}
-                      className="bg-brand-red hover:bg-brand-red/80 text-brand-white font-bold px-6 py-3 hover-glow border-2 border-brand-red"
+                      className="bg-brand-red hover:bg-brand-red/90 text-white font-bold px-6 py-3 hover-glow"
                     >
                       Visit Lovable Learner →
                     </Button>
@@ -69,15 +69,15 @@ const AppCreation = () => {
                 </div>
               </div>
 
-              <div className="bg-brand-black/50 border border-primary/30 rounded-lg p-6 mb-8">
-                <p className="text-brand-white/70 text-center italic">
+              <div className="bg-brand-black border border-border rounded-lg p-6 mb-8">
+                <p className="text-brand-white/60 text-center italic">
                   We'd love to hear your feedback! If you've used Lovable Learner or any of our apps, please share your review or suggestions.
                 </p>
               </div>
 
               <Button
                 onClick={() => window.location.href = '/contact'}
-                className="bg-brand-red hover:bg-brand-red/80 text-brand-white font-bold px-8 py-4 text-lg hover-glow border-2 border-brand-red"
+                className="bg-brand-red hover:bg-brand-red/90 text-white font-bold px-8 py-4 text-lg hover-glow"
               >
                 Discuss an App Project →
               </Button>

@@ -2,12 +2,12 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-brand-black border-t border-brand-red/20 py-10">
+    <footer className="bg-white border-t border-border py-10">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <h3 className="font-playfair font-bold text-xl text-brand-white mb-2">AMBER YAGHI</h3>
-            <p className="text-brand-gold text-sm mb-4">Publisher • Creator • Technologist • Speaker</p>
+            <p className="text-brand-red text-sm mb-4">Publisher • Creator • Technologist • Speaker</p>
             <p className="text-brand-white/60 text-sm">
               Ethical, transparent publishing and digital services for authors and thought leaders.
             </p>
@@ -31,11 +31,12 @@ const Footer = () => {
               <a href="https://tiktok.com/@authoramberyaghi" target="_blank" rel="noopener noreferrer" className="text-brand-white/60 hover:text-brand-red transition-colors text-sm">TikTok</a>
               <a href="https://x.com/amber_yaghi" target="_blank" rel="noopener noreferrer" className="text-brand-white/60 hover:text-brand-red transition-colors text-sm">X (Twitter)</a>
               <a href="https://github.com/ayaghi88" target="_blank" rel="noopener noreferrer" className="text-brand-white/60 hover:text-brand-red transition-colors text-sm">GitHub</a>
+              <a href="https://linker.ee/ThisIsTheLinkInMyBio" target="_blank" rel="noopener noreferrer" className="text-brand-white/60 hover:text-brand-red transition-colors text-sm">All My Links</a>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-brand-red/10 pt-6 text-center text-brand-white/40 text-sm">
+        <div className="border-t border-border pt-6 text-center text-brand-white/40 text-sm">
           <p>Publishing • Apps • Speaking • Contact</p>
           <p className="mt-1">&copy; {new Date().getFullYear()} Amber Yaghi. All rights reserved. Soul Tech Systems</p>
         </div>

@@ -35,21 +35,21 @@ const Publishing = () => {
                 Publishing Services
               </h1>
 
-              <p className="text-brand-white/80 text-lg md:text-xl leading-relaxed mb-8 animate-slide-in-left">
+              <p className="text-brand-white/70 text-lg md:text-xl leading-relaxed mb-8 animate-slide-in-left">
                 Amber Yaghi provides professional, author-first publishing services designed for writers who want high-quality results without giving up ownership or royalties.
               </p>
 
-              <p className="text-brand-white/80 text-lg leading-relaxed mb-12">
+              <p className="text-brand-white/70 text-lg leading-relaxed mb-12">
                 We offer a single, transparent publishing package that includes formatting, custom cover design, global distribution setup, and personalized guidance throughout the publishing process.
               </p>
 
-              <div className="bg-secondary/50 border border-primary/20 rounded-lg p-8 mb-12 animate-slide-in-right">
+              <div className="bg-white border border-border rounded-lg p-8 mb-12 shadow-sm animate-slide-in-right">
                 <h2 className="font-playfair font-bold text-2xl md:text-3xl text-brand-white mb-6">
                   What's Included
                 </h2>
                 <ul className="space-y-4">
                   {included.map((item) => (
-                    <li key={item} className="flex items-center gap-3 text-brand-white/90 text-lg">
+                    <li key={item} className="flex items-center gap-3 text-brand-white/80 text-lg">
                       <CheckCircle className="w-5 h-5 text-brand-gold flex-shrink-0" />
                       {item}
                     </li>
@@ -57,24 +57,24 @@ const Publishing = () => {
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-primary/10 to-secondary border border-primary/30 rounded-lg p-8 mb-12">
+              <div className="bg-gradient-to-br from-brand-red/5 to-brand-gold/5 border border-brand-red/20 rounded-lg p-8 mb-12">
                 <h2 className="font-playfair font-bold text-2xl text-brand-white mb-4">
                   The Amber Yaghi Signature Publishing Package
                 </h2>
-                <p className="text-brand-gold text-3xl font-bold mb-4">$3,000 <span className="text-lg font-normal text-brand-white/60">(one-time)</span></p>
-                <p className="text-brand-white/70 mb-6">
+                <p className="text-brand-red text-3xl font-bold mb-4">$3,000 <span className="text-lg font-normal text-brand-white/60">(one-time)</span></p>
+                <p className="text-brand-white/60 mb-6">
                   Optional add-ons available: ISBNs, editing coordination, apps, websites, speaking kits.
                 </p>
-                <div className="bg-brand-black/50 border border-brand-gold/30 rounded-lg p-4">
+                <div className="bg-white border border-brand-gold/30 rounded-lg p-4">
                   <p className="text-brand-gold font-semibold">✦ Trust Statement</p>
-                  <p className="text-brand-white/90 mt-2">
+                  <p className="text-brand-white/80 mt-2">
                     Authors retain 100% copyright and receive 100% of royalties. No royalties are taken by Amber Yaghi.
                   </p>
                 </div>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button onClick={scrollToContact} className="bg-brand-red hover:bg-brand-red/80 text-brand-white font-bold px-8 py-4 text-lg hover-glow border-2 border-brand-red">
+                <Button onClick={scrollToContact} className="bg-brand-red hover:bg-brand-red/90 text-white font-bold px-8 py-4 text-lg hover-glow">
                   Start Publishing →
                 </Button>
               </div>

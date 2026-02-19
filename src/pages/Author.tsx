@@ -3,10 +3,46 @@ import Footer from '@/components/Footer';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, BookOpen, Star } from 'lucide-react';
+import { ExternalLink, BookOpen, Star, Quote, ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useState, useCallback, useEffect } from 'react';
+import useEmblaCarousel from 'embla-carousel-react';
+
+const testimonials = [
+  {
+    quote: "Amber's work in Mind Bending is a masterclass in bridging quantum thinking with everyday reality. Her ability to distill complex ideas into actionable strategies is truly remarkable.",
+    author: "Dr. Husam M. Yaghi",
+    title: "PhD, Researcher & Technologist",
+    rating: 5,
+  },
+  {
+    quote: "This book changed the way I think about manifestation and personal growth. Amber writes with a rawness and authenticity you rarely find.",
+    author: "Verified Reader",
+    title: "Amazon Review",
+    rating: 5,
+  },
+  {
+    quote: "Mind Bending isn't just a book — it's a toolkit for rewiring your mindset. Practical, powerful, and unapologetically real.",
+    author: "Verified Reader",
+    title: "Amazon Review",
+    rating: 5,
+  },
+];
 
 const Author = () => {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'center' });
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
+  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    const onSelect = () => setSelectedIndex(emblaApi.selectedScrollSnap());
+    emblaApi.on('select', onSelect);
+    onSelect();
+    return () => { emblaApi.off('select', onSelect); };
+  }, [emblaApi]);
   const books = [
     {
       title: "Mind Bending: The Quantum Reality Strategist",
@@ -208,6 +244,70 @@ const Author = () => {
                       {r.name}
                     </a>
                   ))}
+                </div>
+              </motion.section>
+
+              {/* Testimonials Carousel */}
+              <motion.section
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="mb-20"
+              >
+                <h2 className="font-playfair font-bold text-3xl text-brand-white mb-8">What Readers Are Saying</h2>
+                <div className="relative">
+                  <div className="overflow-hidden" ref={emblaRef}>
+                    <div className="flex">
+                      {testimonials.map((t, i) => (
+                        <div key={i} className="flex-[0_0_100%] min-w-0 px-2 md:flex-[0_0_80%] lg:flex-[0_0_60%]">
+                          <div className="bg-white/5 border border-brand-white/10 rounded-xl p-8 md:p-10 relative">
+                            <Quote className="w-10 h-10 text-brand-red/30 absolute top-6 right-6" />
+                            <div className="flex gap-1 mb-4">
+                              {Array.from({ length: t.rating }).map((_, s) => (
+                                <Star key={s} className="w-5 h-5 text-brand-gold fill-brand-gold" />
+                              ))}
+                            </div>
+                            <blockquote className="text-brand-white/80 text-lg leading-relaxed mb-6 italic">
+                              "{t.quote}"
+                            </blockquote>
+                            <div>
+                              <p className="text-brand-white font-bold">{t.author}</p>
+                              <p className="text-brand-white/50 text-sm">{t.title}</p>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Controls */}
+                  <div className="flex items-center justify-center gap-4 mt-6">
+                    <button
+                      onClick={scrollPrev}
+                      className="w-10 h-10 rounded-full border border-brand-white/20 flex items-center justify-center text-brand-white/60 hover:text-brand-white hover:border-brand-red transition"
+                      aria-label="Previous testimonial"
+                    >
+                      <ChevronLeft className="w-5 h-5" />
+                    </button>
+                    <div className="flex gap-2">
+                      {testimonials.map((_, i) => (
+                        <button
+                          key={i}
+                          className={`w-2 h-2 rounded-full transition-all ${i === selectedIndex ? 'bg-brand-red w-6' : 'bg-brand-white/20'}`}
+                          onClick={() => emblaApi?.scrollTo(i)}
+                          aria-label={`Go to testimonial ${i + 1}`}
+                        />
+                      ))}
+                    </div>
+                    <button
+                      onClick={scrollNext}
+                      className="w-10 h-10 rounded-full border border-brand-white/20 flex items-center justify-center text-brand-white/60 hover:text-brand-white hover:border-brand-red transition"
+                      aria-label="Next testimonial"
+                    >
+                      <ChevronRight className="w-5 h-5" />
+                    </button>
+                  </div>
                 </div>
               </motion.section>
 

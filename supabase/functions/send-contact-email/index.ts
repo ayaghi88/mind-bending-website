@@ -27,7 +27,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send email to Amber using Resend default sender with reply-to
     const emailResponse = await resend.emails.send({
-      from: "Amber Yaghi Website <onboarding@resend.dev>",
+      from: "Amber Yaghi Website <contact@amberyaghi.org>",
       to: ["amber@amberyaghi.org"],
       reply_to: email,
       subject: subject || "New Contact Form Submission",

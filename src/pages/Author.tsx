@@ -3,7 +3,7 @@ import Footer from '@/components/Footer';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, BookOpen } from 'lucide-react';
+import { ExternalLink, BookOpen, Star } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Author = () => {
@@ -209,6 +209,74 @@ const Author = () => {
                     </a>
                   ))}
                 </div>
+              </motion.section>
+
+              {/* Rating & Review */}
+              <motion.section
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="mb-20"
+              >
+                <h2 className="font-playfair font-bold text-3xl text-brand-white mb-8">Leave a Review</h2>
+                <form
+                  name="author-reviews"
+                  method="POST"
+                  data-netlify="true"
+                  className="bg-white/5 border border-brand-white/10 rounded-xl p-8 space-y-6 max-w-2xl"
+                >
+                  <input type="hidden" name="form-name" value="author-reviews" />
+
+                  <div>
+                    <label className="block text-brand-white/80 text-sm font-semibold mb-3">Your Rating</label>
+                    <div className="flex gap-1" id="star-rating">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <label key={star} className="cursor-pointer group">
+                          <input
+                            type="radio"
+                            name="rating"
+                            value={star}
+                            required
+                            className="sr-only peer"
+                          />
+                          <Star className="w-8 h-8 text-brand-white/20 peer-checked:text-brand-gold peer-checked:fill-brand-gold group-hover:text-brand-gold group-hover:fill-brand-gold transition-colors" />
+                        </label>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <label htmlFor="reviewer-name" className="block text-brand-white/80 text-sm font-semibold mb-2">Name</label>
+                    <input
+                      type="text"
+                      id="reviewer-name"
+                      name="name"
+                      required
+                      placeholder="Your name"
+                      className="w-full rounded-lg border border-brand-white/10 bg-brand-black px-4 py-3 text-brand-white placeholder:text-brand-white/30 focus:outline-none focus:ring-2 focus:ring-brand-red/50 transition"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="review-comment" className="block text-brand-white/80 text-sm font-semibold mb-2">Comment</label>
+                    <textarea
+                      id="review-comment"
+                      name="comment"
+                      rows={4}
+                      required
+                      placeholder="Share your thoughts…"
+                      className="w-full rounded-lg border border-brand-white/10 bg-brand-black px-4 py-3 text-brand-white placeholder:text-brand-white/30 focus:outline-none focus:ring-2 focus:ring-brand-red/50 transition resize-none"
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="bg-brand-red hover:bg-brand-red/90 text-white font-bold px-8 py-3 rounded-lg text-lg transition hover-glow"
+                  >
+                    Submit Review →
+                  </button>
+                </form>
               </motion.section>
 
               {/* CTA */}

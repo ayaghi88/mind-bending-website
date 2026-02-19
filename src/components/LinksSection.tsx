@@ -1,4 +1,5 @@
 import { ExternalLink, Book, Calendar, FileText, Link2, Github, Heart, Award, GraduationCap } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const LinksSection = () => {
   const links = [
@@ -50,23 +51,39 @@ const LinksSection = () => {
     <section id="links" className="py-20 bg-brand-black">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="font-playfair font-bold text-3xl md:text-4xl text-brand-white mb-4 animate-fade-in">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="font-playfair font-bold text-3xl md:text-4xl text-brand-white mb-4"
+          >
             Connect With Me
-          </h2>
-          <p className="text-brand-white/60 text-lg animate-slide-in-left">
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-brand-white/60 text-lg"
+          >
             Explore more ways to engage with my work
-          </p>
+          </motion.p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {links.map((link, index) => (
-            <a
+            <motion.a
               key={index}
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-white border border-border rounded-lg p-6 hover:border-brand-red hover:shadow-md transition-all duration-300 animate-fade-in"
-              style={{ animationDelay: `${index * 100}ms` }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.08 }}
+              whileHover={{ y: -4, scale: 1.02 }}
+              className="group bg-white border border-border rounded-lg p-6 hover:border-brand-red hover:shadow-md transition-all duration-300"
             >
               <div className="flex flex-col items-center text-center">
                 <div className="w-12 h-12 bg-brand-red/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-brand-red/20 transition-colors">
@@ -80,7 +97,7 @@ const LinksSection = () => {
                 </p>
                 <ExternalLink className="w-4 h-4 text-brand-red/40 group-hover:text-brand-red transition-colors" />
               </div>
-            </a>
+            </motion.a>
           ))}
         </div>
       </div>

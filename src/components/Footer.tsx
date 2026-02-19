@@ -1,10 +1,17 @@
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const Footer = () => {
   return (
     <footer className="bg-white border-t border-border py-10">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="grid md:grid-cols-3 gap-8 mb-8"
+        >
           <div>
             <h3 className="font-playfair font-bold text-xl text-brand-white mb-2">AMBER YAGHI</h3>
             <p className="text-brand-red text-sm mb-4">Publisher • Creator • Technologist • Speaker</p>
@@ -34,7 +41,7 @@ const Footer = () => {
               <a href="https://linker.ee/ThisIsTheLinkInMyBio" target="_blank" rel="noopener noreferrer" className="text-brand-white/60 hover:text-brand-red transition-colors text-sm">All My Links</a>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         <div className="border-t border-border pt-6 text-center text-brand-white/40 text-sm">
           <p>Publishing • Apps • Speaking • Contact</p>

@@ -11,11 +11,11 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Amber Yaghi | Publisher, Creator, Technologist & Speaker</title>
-        <meta name="description" content="Amber Yaghi offers professional publishing, app creation, and digital infrastructure services for authors, founders, and thought leaders — with transparent pricing and full ownership." />
+        <title>Amber Yaghi | Author, Publisher, Creator, Technologist & Speaker</title>
+        <meta name="description" content="Amber Yaghi — author of Mind Bending, Business Grants Are FREE99, and more. Professional publishing, app creation, and digital services with transparent pricing and full ownership." />
         <link rel="canonical" href="https://amberyaghi.org/" />
-        <meta property="og:title" content="Amber Yaghi | Build Ideas. Publish Authority. Create Impact." />
-        <meta property="og:description" content="Professional publishing, app creation, and digital services for authors and thought leaders." />
+        <meta property="og:title" content="Amber Yaghi | Author, Publisher, Creator & Speaker" />
+        <meta property="og:description" content="Author of Mind Bending & more. Professional publishing, app creation, and digital services for authors and thought leaders." />
         <meta property="og:url" content="https://amberyaghi.org/" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">
@@ -24,8 +24,8 @@ const Index = () => {
             "@type": "Person",
             "name": "Amber Yaghi",
             "url": "https://amberyaghi.org",
-            "jobTitle": "Publisher, Creator, Technologist, Speaker",
-            "description": "Publisher, creator, and technologist providing ethical, transparent publishing and digital services for authors and thought leaders.",
+            "jobTitle": "Author, Publisher, Creator, Technologist, Speaker",
+            "description": "Author, publisher, creator, and technologist providing ethical, transparent publishing and digital services for authors and thought leaders.",
             "email": "amber@amberyaghi.org",
             "sameAs": [
               "https://facebook.com/authoramberyaghi",

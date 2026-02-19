@@ -92,7 +92,7 @@ const Index = () => {
               <p className="text-brand-white/60 text-lg mb-6 max-w-2xl mx-auto">
                 Have you read Mind Bending, used Lovable Learner, or worked with Amber? We'd love to hear your review and feedback.
               </p>
-              <Link to="/contact">
+              <Link to="/contact?review=true">
                 <Button className="bg-brand-red hover:bg-brand-red/90 text-white font-bold px-8 py-4 text-lg hover-glow">
                   Leave a Review →
                 </Button>

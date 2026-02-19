@@ -1,7 +1,7 @@
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Helmet } from 'react-helmet-async';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -10,6 +10,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Mail, Loader2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
+import { useSearchParams } from 'react-router-dom';
 
 const serviceOptions = [
   { id: 'publish', label: 'Publish a Book' },
@@ -17,15 +18,19 @@ const serviceOptions = [
   { id: 'dns', label: 'DNS / Technical Setup' },
   { id: 'speaking', label: 'Speaking Engagement' },
   { id: 'media', label: 'Interview / Media Request' },
+  { id: 'review', label: 'Leave a Review / Feedback' },
 ];
 
 const Contact = () => {
+  const [searchParams] = useSearchParams();
+  const isReview = searchParams.get('review') === 'true';
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: '',
+    subject: isReview ? 'Review / Feedback' : '',
     message: '',
-    services: [] as string[],
+    services: isReview ? ['review'] : [] as string[],
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
@@ -80,10 +85,12 @@ const Contact = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h1 className="font-playfair font-black text-4xl md:text-5xl text-brand-white mb-4 animate-fade-in">
-                Work With Amber Yaghi
+                {isReview ? 'Leave a Review' : 'Work With Amber Yaghi'}
               </h1>
               <p className="text-brand-white/70 text-lg mb-12 animate-slide-in-left">
-                To inquire about publishing services, app creation, DNS setup, or speaking engagements, please use the form below.
+                {isReview
+                  ? 'Have you read Mind Bending, used Lovable Learner, or worked with Amber? Share your experience below — your feedback means the world!'
+                  : 'To inquire about publishing services, app creation, DNS setup, or speaking engagements, please use the form below.'}
               </p>
 
               <div className="grid md:grid-cols-2 gap-12">

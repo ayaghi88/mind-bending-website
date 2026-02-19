@@ -76,12 +76,12 @@ const Speaking = () => {
                       Amber Yaghi is recognized with a <strong>Google Knowledge Panel</strong>, verifying her notability as a published author, speaker, and technologist.
                     </p>
                     <a
-                      href="https://www.google.com/search?q=Amber+Yaghi+author"
+                      href="https://share.google/llNPWJQQPlVc5ZzPI"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-brand-red hover:underline font-semibold"
                     >
-                      Search "Amber Yaghi author" on Google <ExternalLink className="w-4 h-4" />
+                      View Google Knowledge Panel <ExternalLink className="w-4 h-4" />
                     </a>
                   </div>
                 </div>

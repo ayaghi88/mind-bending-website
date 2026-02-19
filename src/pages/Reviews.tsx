@@ -168,8 +168,25 @@ const Reviews = () => {
                 <form
                   name="book-reviews"
                   method="POST"
+                  action="/reviews"
                   data-netlify="true"
                   className="bg-white/5 border border-brand-white/10 rounded-xl p-8 md:p-10 space-y-8 max-w-2xl"
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    const formData = new FormData(e.currentTarget);
+                    fetch('/', {
+                      method: 'POST',
+                      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                      body: new URLSearchParams(formData as any).toString(),
+                    })
+                      .then(() => {
+                        alert('Thank you for your review!');
+                        setSelectedStar(0);
+                        setHoveredStar(0);
+                        (e.target as HTMLFormElement).reset();
+                      })
+                      .catch(() => alert('Something went wrong. Please try again.'));
+                  }}
                 >
                   <input type="hidden" name="form-name" value="book-reviews" />
                   <input type="hidden" name="rating" value={selectedStar} />

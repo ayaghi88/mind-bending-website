@@ -7,8 +7,13 @@ import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Book from "./pages/Book";
+import Books from "./pages/Books";
 import Curriculum from "./pages/Curriculum";
 import Contact from "./pages/Contact";
+import Publishing from "./pages/Publishing";
+import AppCreation from "./pages/AppCreation";
+import DNSTech from "./pages/DNSTech";
+import Speaking from "./pages/Speaking";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,9 +29,13 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
             <Route path="/book" element={<Book />} />
+            <Route path="/books" element={<Books />} />
             <Route path="/curriculum" element={<Curriculum />} />
             <Route path="/contact" element={<Contact />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="/publishing" element={<Publishing />} />
+            <Route path="/apps" element={<AppCreation />} />
+            <Route path="/dns-tech" element={<DNSTech />} />
+            <Route path="/speaking" element={<Speaking />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

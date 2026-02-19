@@ -26,25 +26,43 @@ const Books = () => {
             "@context": "https://schema.org",
             "@graph": [
               {
+                "@type": "Person",
+                "@id": "https://amberyaghi.org/#amber-yaghi",
+                "name": "Amber Yaghi",
+                "url": "https://amberyaghi.org",
+                "sameAs": [
+                  "https://www.amazon.com/stores/author/B0FF39R3YK",
+                  "https://www.lulu.com/shop/amber-yaghi"
+                ]
+              },
+              {
                 "@type": "Book",
                 "name": "Mind Bending: The Quantum Reality Strategist",
-                "author": { "@type": "Person", "name": "Amber Yaghi" },
+                "author": { "@type": "Person", "@id": "https://amberyaghi.org/#amber-yaghi", "name": "Amber Yaghi" },
+                "isbn": "9781300224419",
                 "bookFormat": ["Paperback", "Hardcover", "EBook"],
-                "url": "https://amberyaghi.org/books"
+                "url": "https://amberyaghi.org/books",
+                "publisher": { "@type": "Organization", "name": "Amber Yaghi" },
+                "offers": [
+                  { "@type": "Offer", "url": "https://www.amazon.com/s?k=amber+yaghi+mind+bending", "seller": { "@type": "Organization", "name": "Amazon" } },
+                  { "@type": "Offer", "url": "https://www.lulu.com/shop/amber-yaghi/mind-bending-the-quantum-reality-strategist/paperback/product-45ympe6.html", "seller": { "@type": "Organization", "name": "Lulu" } }
+                ]
               },
               {
                 "@type": "Book",
                 "name": "Business Grants Are FREE99",
-                "author": { "@type": "Person", "name": "Amber Yaghi" },
+                "author": { "@type": "Person", "@id": "https://amberyaghi.org/#amber-yaghi", "name": "Amber Yaghi" },
                 "bookFormat": "EBook",
-                "url": "https://www.amazon.com/s?k=amber+yaghi+business+grants"
+                "url": "https://www.amazon.com/Business-Grants-FREE99-Amber-Yaghi-ebook/dp/B0FF39R3YK",
+                "offers": { "@type": "Offer", "url": "https://www.amazon.com/Business-Grants-FREE99-Amber-Yaghi-ebook/dp/B0FF39R3YK", "seller": { "@type": "Organization", "name": "Amazon" } }
               },
               {
                 "@type": "Book",
                 "name": "Quick Inquiry Removal Guide",
-                "author": { "@type": "Person", "name": "Amber Yaghi" },
+                "author": { "@type": "Person", "@id": "https://amberyaghi.org/#amber-yaghi", "name": "Amber Yaghi" },
                 "bookFormat": "EBook",
-                "url": "https://www.amazon.com/s?k=amber+yaghi+quick+inquiry+removal"
+                "url": "https://www.amazon.com/Quick-Inquiry-Removal-Guide-amber-ebook/dp/B09V1SD6W8",
+                "offers": { "@type": "Offer", "url": "https://www.amazon.com/Quick-Inquiry-Removal-Guide-amber-ebook/dp/B09V1SD6W8", "seller": { "@type": "Organization", "name": "Amazon" } }
               }
             ]
           })}
@@ -55,11 +73,11 @@ const Books = () => {
         <div className="pt-24 pb-20">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <h1 className="font-playfair font-black text-4xl md:text-5xl lg:text-6xl text-brand-white mb-6 animate-fade-in">
-                Books by Amber Yaghi
+            <h1 className="font-playfair font-black text-4xl md:text-5xl lg:text-6xl text-brand-white mb-6 animate-fade-in">
+                Published Works
               </h1>
               <p className="text-brand-white/70 text-lg md:text-xl leading-relaxed mb-12 animate-slide-in-left">
-                Explore published works focused on insight, clarity, and intellectual ownership.
+                Explore published works by Amber Yaghi — focused on insight, clarity, and intellectual ownership.
               </p>
 
               {/* Featured Book: Mind Bending */}
@@ -87,6 +105,9 @@ const Books = () => {
                   </p>
 
                   <div className="space-y-2 mb-8">
+                    <p className="text-brand-white">
+                      <span className="text-brand-gold font-semibold">ISBN:</span> 978-1-300-22441-9
+                    </p>
                     <p className="text-brand-white">
                       <span className="text-brand-gold font-semibold">Formats:</span> Paperback, Hardcover & eBook
                     </p>
@@ -120,16 +141,16 @@ const Books = () => {
                   <h3 className="font-playfair font-bold text-xl text-brand-white mb-2">
                     Business Grants Are FREE99
                   </h3>
-                  <p className="text-brand-gold text-sm font-semibold mb-4">eBook</p>
+                  <p className="text-brand-gold text-sm font-semibold mb-4">eBook · ASIN: B0FF39R3YK</p>
                   <p className="text-brand-white/60 mb-6 leading-relaxed">
                     A practical guide to finding and securing free business grants. Learn where to look, how to apply, and how to maximize your chances of funding — without spending a dime.
                   </p>
                   <Button
                     variant="outline"
-                    onClick={() => window.open('https://www.amazon.com/s?k=amber+yaghi+business+grants+free99', '_blank')}
+                    onClick={() => window.open('https://www.amazon.com/Business-Grants-FREE99-Amber-Yaghi-ebook/dp/B0FF39R3YK', '_blank')}
                     className="border-brand-red/50 text-brand-white hover:bg-brand-red/10"
                   >
-                    Find on Amazon
+                    View on Amazon
                   </Button>
                 </div>
 
@@ -138,16 +159,16 @@ const Books = () => {
                   <h3 className="font-playfair font-bold text-xl text-brand-white mb-2">
                     Quick Inquiry Removal Guide
                   </h3>
-                  <p className="text-brand-gold text-sm font-semibold mb-4">eBook</p>
+                  <p className="text-brand-gold text-sm font-semibold mb-4">eBook · ASIN: B09V1SD6W8</p>
                   <p className="text-brand-white/60 mb-6 leading-relaxed">
                     A step-by-step guide to removing hard inquiries from your credit report quickly and effectively. Take control of your credit and financial future.
                   </p>
                   <Button
                     variant="outline"
-                    onClick={() => window.open('https://www.amazon.com/s?k=amber+yaghi+quick+inquiry+removal', '_blank')}
+                    onClick={() => window.open('https://www.amazon.com/Quick-Inquiry-Removal-Guide-amber-ebook/dp/B09V1SD6W8', '_blank')}
                     className="border-brand-red/50 text-brand-white hover:bg-brand-red/10"
                   >
-                    Find on Amazon
+                    View on Amazon
                   </Button>
                 </div>
               </div>

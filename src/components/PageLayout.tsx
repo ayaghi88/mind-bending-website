@@ -4,7 +4,7 @@ const PageLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <Navigation />
-      <div className="lg:ml-56">
+      <div className="md:ml-56 mt-24 md:mt-0">
         {children}
       </div>
     </>

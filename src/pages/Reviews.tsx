@@ -5,7 +5,8 @@ import { Star, Quote, ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useState, useCallback, useEffect } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
-
+import { supabase } from '@/integrations/supabase/client';
+import { useToast } from '@/hooks/use-toast';
 const testimonials = [
   {
     quote: "Amber's work in Mind Bending is a masterclass in bridging quantum thinking with everyday reality. Her ability to distill complex ideas into actionable strategies is truly remarkable.",
@@ -43,6 +44,19 @@ const Reviews = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [hoveredStar, setHoveredStar] = useState(0);
   const [selectedStar, setSelectedStar] = useState(0);
+  const [submittedReviews, setSubmittedReviews] = useState<any[]>([]);
+  const [submitting, setSubmitting] = useState(false);
+  const { toast } = useToast();
+
+  const fetchReviews = async () => {
+    const { data } = await supabase
+      .from('reviews')
+      .select('*')
+      .order('created_at', { ascending: false });
+    if (data) setSubmittedReviews(data);
+  };
+
+  useEffect(() => { fetchReviews(); }, []);
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
@@ -166,30 +180,27 @@ const Reviews = () => {
               >
                 <h2 className="font-playfair font-bold text-3xl text-brand-white mb-8">Leave a Review</h2>
                 <form
-                  name="book-reviews"
-                  method="POST"
-                  action="/reviews"
-                  data-netlify="true"
                   className="bg-white/5 border border-brand-white/10 rounded-xl p-8 md:p-10 space-y-8 max-w-2xl"
-                  onSubmit={(e) => {
+                  onSubmit={async (e) => {
                     e.preventDefault();
-                    const formData = new FormData(e.currentTarget);
-                    fetch('/', {
-                      method: 'POST',
-                      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                      body: new URLSearchParams(formData as any).toString(),
-                    })
-                      .then(() => {
-                        alert('Thank you for your review!');
-                        setSelectedStar(0);
-                        setHoveredStar(0);
-                        (e.target as HTMLFormElement).reset();
-                      })
-                      .catch(() => alert('Something went wrong. Please try again.'));
+                    setSubmitting(true);
+                    const form = e.currentTarget;
+                    const name = (form.elements.namedItem('name') as HTMLInputElement).value;
+                    const book = (form.elements.namedItem('book') as HTMLSelectElement).value;
+                    const comment = (form.elements.namedItem('comment') as HTMLTextAreaElement).value;
+                    const { error } = await supabase.from('reviews').insert({ name, book, rating: selectedStar, comment });
+                    setSubmitting(false);
+                    if (error) {
+                      toast({ title: 'Error', description: 'Something went wrong. Please try again.', variant: 'destructive' });
+                    } else {
+                      toast({ title: 'Thank you!', description: 'Your review has been submitted.' });
+                      setSelectedStar(0);
+                      setHoveredStar(0);
+                      form.reset();
+                      fetchReviews();
+                    }
                   }}
                 >
-                  <input type="hidden" name="form-name" value="book-reviews" />
-                  <input type="hidden" name="rating" value={selectedStar} />
 
                   {/* Interactive Star Rating */}
                   <div>
@@ -266,13 +277,38 @@ const Reviews = () => {
 
                   <button
                     type="submit"
-                    disabled={selectedStar === 0}
+                    disabled={selectedStar === 0 || submitting}
                     className="bg-brand-red hover:bg-brand-red/90 text-white font-bold px-8 py-3 rounded-lg text-lg transition hover-glow disabled:opacity-40 disabled:cursor-not-allowed"
                   >
-                    Submit Review →
+                    {submitting ? 'Submitting…' : 'Submit Review →'}
                   </button>
                 </form>
               </motion.section>
+
+              {/* Submitted Reviews */}
+              {submittedReviews.length > 0 && (
+                <motion.section
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                  className="mt-20"
+                >
+                  <h2 className="font-playfair font-bold text-3xl text-brand-white mb-8">Reader Reviews</h2>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    {submittedReviews.map((review) => (
+                      <div key={review.id} className="bg-white/5 border border-brand-white/10 rounded-xl p-6">
+                        <StarRating rating={review.rating} />
+                        <p className="text-brand-white/80 mt-3 mb-4 leading-relaxed">"{review.comment}"</p>
+                        <div className="flex items-center justify-between">
+                          <p className="text-brand-white font-semibold text-sm">{review.name}</p>
+                          <p className="text-brand-white/40 text-xs">{review.book}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </motion.section>
+              )}
 
             </div>
           </div>

@@ -29,9 +29,9 @@ const Author = () => {
     { name: "Amazon", url: "https://www.amazon.com/s?k=amber+yaghi" },
     { name: "Barnes & Noble", url: "https://www.barnesandnoble.com/s/amber+yaghi" },
     { name: "Lulu", url: "https://www.lulu.com/search?q=amber+yaghi" },
-    { name: "Walmart.com", url: "https://www.walmart.com/search?q=amber+yaghi" },
-    { name: "eBay", url: "https://www.ebay.com/sch/i.html?_nkw=amber+yaghi" },
-    { name: "Books-A-Million", url: "https://www.booksamillion.com/search?query=amber+yaghi" },
+    { name: "Walmart.com", url: "https://www.walmart.com/ip/16828660779?sid=2bdcd3ab-8220-4390-ba8e-891671c8297a" },
+    { name: "eBay", url: "https://www.ebay.com/sch/i.html?_nkw=mind+bending+the+quantum+reality+strategist&_sop=12" },
+    { name: "Books-A-Million", url: "https://www.booksamillion.com/p/Mind-Bending/Amber-Yaghi/9781300224419" },
   ];
 
   return (
@@ -124,10 +124,10 @@ const Author = () => {
                 <div className="grid md:grid-cols-3 gap-12 items-start">
                   <div className="md:col-span-2 space-y-6 text-brand-white/75 leading-relaxed text-lg">
                     <p>
-                      Well until adulthood, whenever someone passed away, a classmate or old friend would reach out for me to write a poem for the person's obituary. I'd have it to them in no time, with the nicknames or special memories they'd requested I add. It made me feel worth something, to be able to author someone's going away poem or even be considered to do so!
+                      Well into adulthood, whenever someone passed away, a classmate or old friend would reach out for me to write a poem for the person's obituary. I'd have it to them in no time, with the nicknames or special memories they'd requested I add. It made me feel worth something, to be able to author someone's going away poem or even be considered to do so!
                     </p>
                     <p>
-                      Writing is what I was known for, before deciding who I wanted to be. It's the one skill I never had to learn; I was born to do so! My only God-given talent. Even as social media became popular over the years, I still remained an original creator. I'd share someone else's post, but I could never do the copy &amp; paste thing. I had to create my own, from the heart!
+                      Writing is what I was known for, before deciding who I wanted to be. It's the one skill I never had to learn; I was created for that purpose! My only God-given talent. Even as social media became popular over the years, I still remained an original creator. I'd share someone else's post, but I could never do the copy &amp; paste thing. I had to create my own, from the heart!
                     </p>
                     <p>
                       I entered the world a double minority. I'm covered in tattoos, self-expressive, super passionate, nonconforming, &amp; naturally loud. I'm a proud lame. I shockingly became a high school dropout after being an A/B honor roll student most of my life. My path did not look traditional, but it was intentional.

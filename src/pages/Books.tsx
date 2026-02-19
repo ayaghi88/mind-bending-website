@@ -10,9 +10,9 @@ const Books = () => {
     { name: "Amazon", url: "https://www.amazon.com/s?k=amber+yaghi+mind+bending" },
     { name: "Barnes & Noble", url: "https://www.barnesandnoble.com/s/amber+yaghi" },
     { name: "Lulu", url: "https://www.lulu.com/shop/amber-yaghi/mind-bending-the-quantum-reality-strategist/paperback/product-45ympe6.html" },
-    { name: "Walmart", url: "https://www.walmart.com/search?q=amber+yaghi+mind+bending" },
-    { name: "Books-A-Million", url: "https://www.booksamillion.com/search?query=amber+yaghi" },
-    { name: "eBay", url: "https://www.ebay.com/sch/i.html?_nkw=amber+yaghi+mind+bending" },
+    { name: "Walmart", url: "https://www.walmart.com/ip/16828660779?sid=2bdcd3ab-8220-4390-ba8e-891671c8297a" },
+    { name: "Books-A-Million", url: "https://www.booksamillion.com/p/Mind-Bending/Amber-Yaghi/9781300224419" },
+    { name: "eBay", url: "https://www.ebay.com/sch/i.html?_nkw=mind+bending+the+quantum+reality+strategist&_sop=12" },
   ];
 
   return (

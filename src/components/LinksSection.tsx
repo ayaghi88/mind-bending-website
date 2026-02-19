@@ -30,8 +30,9 @@ const LinksSection = () => {
     {
       title: "GitHub Sponsor",
       description: "Support my open source work on GitHub",
-      url: "https://github.com/ayaghi88",
+      url: "https://github.com/sponsors/ayaghi88",
       icon: Github,
+      isSponsor: true,
     },
     {
       title: "Nominate for TED Talk",
@@ -73,31 +74,45 @@ const LinksSection = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {links.map((link, index) => (
-            <motion.a
+            <motion.div
               key={index}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.08 }}
-              whileHover={{ y: -4, scale: 1.02 }}
-              className="group bg-white border border-border rounded-lg p-6 hover:border-brand-red hover:shadow-md transition-all duration-300"
             >
-              <div className="flex flex-col items-center text-center">
-                <div className="w-12 h-12 bg-brand-red/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-brand-red/20 transition-colors">
-                  <link.icon className="w-6 h-6 text-brand-red" />
+              {'isSponsor' in link && link.isSponsor ? (
+                <div className="bg-white border border-border rounded-lg p-6 hover:border-brand-red hover:shadow-md transition-all duration-300 h-full flex flex-col items-center justify-center">
+                  <iframe
+                    src="https://github.com/sponsors/ayaghi88/card"
+                    title="Sponsor ayaghi88"
+                    height="225"
+                    width="100%"
+                    style={{ border: 0, maxWidth: '600px' }}
+                  />
                 </div>
-                <h3 className="font-playfair text-lg text-brand-white mb-2 group-hover:text-brand-red transition-colors">
-                  {link.title}
-                </h3>
-                <p className="text-brand-white/60 text-sm mb-3">
-                  {link.description}
-                </p>
-                <ExternalLink className="w-4 h-4 text-brand-red/40 group-hover:text-brand-red transition-colors" />
-              </div>
-            </motion.a>
+              ) : (
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group bg-white border border-border rounded-lg p-6 hover:border-brand-red hover:shadow-md transition-all duration-300 block h-full hover:-translate-y-1"
+                >
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-12 h-12 bg-brand-red/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-brand-red/20 transition-colors">
+                      <link.icon className="w-6 h-6 text-brand-red" />
+                    </div>
+                    <h3 className="font-playfair text-lg text-brand-white mb-2 group-hover:text-brand-red transition-colors">
+                      {link.title}
+                    </h3>
+                    <p className="text-brand-white/60 text-sm mb-3">
+                      {link.description}
+                    </p>
+                    <ExternalLink className="w-4 h-4 text-brand-red/40 group-hover:text-brand-red transition-colors" />
+                  </div>
+                </a>
+              )}
+            </motion.div>
           ))}
         </div>
       </div>

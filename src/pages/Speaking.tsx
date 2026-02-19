@@ -53,7 +53,7 @@ const Speaking = () => {
                       Amber Yaghi presenting <strong>"Transformational Methods from Amber Yaghi"</strong> at a past speaking engagement alongside fellow authors and speakers.
                     </p>
                     <a
-                      href="https://app.eventraptor.com/speaker-profiles/amberyaghi"
+                      href="https://app.eventraptor.com/speaker-profiles/amber-yaghi"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-brand-red hover:underline mt-3 font-semibold"

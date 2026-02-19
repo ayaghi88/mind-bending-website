@@ -25,10 +25,11 @@ const handler = async (req: Request): Promise<Response> => {
   try {
     const { name, email, subject, message, services }: ContactEmailRequest & { services?: string[] } = await req.json();
 
-    // Send email to Amber via verified domain
+    // Send email to Amber using Resend default sender with reply-to
     const emailResponse = await resend.emails.send({
-      from: "Amber Yaghi Website <contact@amberyaghi.org>",
+      from: "Amber Yaghi Website <onboarding@resend.dev>",
       to: ["amber@amberyaghi.org"],
+      reply_to: email,
       subject: subject || "New Contact Form Submission",
       html: `
         <h2>New Contact Form Submission</h2>
@@ -41,7 +42,11 @@ const handler = async (req: Request): Promise<Response> => {
       `,
     });
 
-    console.log("Email sent successfully:", emailResponse);
+    console.log("Resend response:", JSON.stringify(emailResponse));
+
+    if (emailResponse.error) {
+      throw new Error(emailResponse.error.message);
+    }
 
     return new Response(JSON.stringify({ success: true, data: emailResponse }), {
       status: 200,

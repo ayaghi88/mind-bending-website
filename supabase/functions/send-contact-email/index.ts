@@ -23,7 +23,7 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    const { name, email, subject, message }: ContactEmailRequest = await req.json();
+    const { name, email, subject, message, services }: ContactEmailRequest & { services?: string[] } = await req.json();
 
     // Send email to Amber (using verified email until domain is verified in Resend)
     const emailResponse = await resend.emails.send({

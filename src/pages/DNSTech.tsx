@@ -3,6 +3,7 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Helmet } from 'react-helmet-async';
 import { Globe, Mail, Server, Wrench } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const DNSTech = () => {
   const services = [
@@ -42,12 +43,11 @@ const DNSTech = () => {
                 ))}
               </div>
 
-              <Button
-                onClick={() => window.location.href = '/contact'}
-                className="bg-brand-red hover:bg-brand-red/90 text-white font-bold px-8 py-4 text-lg hover-glow"
-              >
-                Request DNS Setup →
-              </Button>
+              <Link to="/contact">
+                <Button className="bg-brand-red hover:bg-brand-red/90 text-white font-bold px-8 py-4 text-lg hover-glow">
+                  Request DNS Setup →
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

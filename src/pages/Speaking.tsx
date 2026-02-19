@@ -3,6 +3,7 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Helmet } from 'react-helmet-async';
 import { Mic, Radio, Users, BookOpen, ExternalLink, Award, Star } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Speaking = () => {
   const topics = [
@@ -138,19 +139,16 @@ const Speaking = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  onClick={() => window.location.href = '/contact'}
-                  className="bg-brand-red hover:bg-brand-red/90 text-white font-bold px-8 py-4 text-lg hover-glow"
-                >
-                  Book Amber for Speaking →
-                </Button>
-                <Button
-                  onClick={() => window.location.href = '/contact'}
-                  variant="outline"
-                  className="border-brand-gold text-brand-gold hover:bg-brand-gold/10 font-bold px-8 py-4 text-lg"
-                >
-                  Request an Interview →
-                </Button>
+                <Link to="/contact">
+                  <Button className="bg-brand-red hover:bg-brand-red/90 text-white font-bold px-8 py-4 text-lg hover-glow">
+                    Book Amber for Speaking →
+                  </Button>
+                </Link>
+                <Link to="/contact">
+                  <Button variant="outline" className="border-brand-gold text-brand-gold hover:bg-brand-gold/10 font-bold px-8 py-4 text-lg">
+                    Request an Interview →
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

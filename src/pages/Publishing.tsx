@@ -3,6 +3,7 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Publishing = () => {
   const included = [
@@ -14,10 +15,6 @@ const Publishing = () => {
     "Metadata optimization",
     "One-on-one publishing strategy session",
   ];
-
-  const scrollToContact = () => {
-    window.location.href = '/contact';
-  };
 
   return (
     <>
@@ -74,9 +71,11 @@ const Publishing = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button onClick={scrollToContact} className="bg-brand-red hover:bg-brand-red/90 text-white font-bold px-8 py-4 text-lg hover-glow">
-                  Start Publishing →
-                </Button>
+                <Link to="/contact">
+                  <Button className="bg-brand-red hover:bg-brand-red/90 text-white font-bold px-8 py-4 text-lg hover-glow">
+                    Start Publishing →
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

@@ -3,6 +3,7 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Helmet } from 'react-helmet-async';
 import { Smartphone, BookOpen, Brain, Mic, Globe } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const AppCreation = () => {
   const useCases = [
@@ -102,12 +103,11 @@ const AppCreation = () => {
                 </p>
               </div>
 
-              <Button
-                onClick={() => window.location.href = '/contact'}
-                className="bg-brand-red hover:bg-brand-red/90 text-white font-bold px-8 py-4 text-lg hover-glow"
-              >
-                Discuss an App Project →
-              </Button>
+              <Link to="/contact">
+                <Button className="bg-brand-red hover:bg-brand-red/90 text-white font-bold px-8 py-4 text-lg hover-glow">
+                  Discuss an App Project →
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

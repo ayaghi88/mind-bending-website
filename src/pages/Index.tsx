@@ -12,7 +12,7 @@ const Index = () => {
     <>
       <Helmet>
         <title>Amber Yaghi | Author, Publisher, Creator, Technologist & Speaker</title>
-        <meta name="description" content="Amber Yaghi — author of Mind Bending, Business Grants Are FREE99, and more. Professional publishing, app creation, and digital services with transparent pricing and full ownership." />
+        <meta name="description" content="Amber Yaghi — author of Mind Bending: The Quantum Reality Strategist. Professional publishing, app creation, and digital services for authors, founders, and thought leaders." />
         <link rel="canonical" href="https://amberyaghi.org/" />
         <meta property="og:title" content="Amber Yaghi | Author, Publisher, Creator & Speaker" />
         <meta property="og:description" content="Author of Mind Bending & more. Professional publishing, app creation, and digital services for authors and thought leaders." />

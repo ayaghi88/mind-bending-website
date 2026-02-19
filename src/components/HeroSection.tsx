@@ -35,7 +35,7 @@ const HeroSection = () => {
             className="mb-10"
           >
             <p className="text-brand-white/70 text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-              Amber Yaghi offers professional publishing, app creation, and digital infrastructure services for authors, founders, and thought leaders — with transparent pricing and full ownership.
+              Author, publisher, creator, technologist & speaker. Amber Yaghi offers professional publishing, app creation, and digital infrastructure services for authors, founders, and thought leaders — with transparent pricing and full ownership.
             </p>
           </motion.div>
 

@@ -45,10 +45,10 @@ const BookSection = () => {
             
             <div className="space-y-4 mb-8">
               <p className="text-brand-white">
-                <span className="text-brand-gold font-semibold">Format:</span> Paperback
+                <span className="text-brand-gold font-semibold">Formats:</span> Paperback, Hardcover & eBook
               </p>
               <p className="text-brand-white">
-                <span className="text-brand-gold font-semibold">Available:</span> Now on Lulu
+                <span className="text-brand-gold font-semibold">Available:</span> Amazon, Lulu, B&N, Walmart.com, eBay, Books-A-Million & more
               </p>
             </div>
             

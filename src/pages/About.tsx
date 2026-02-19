@@ -7,8 +7,8 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>About Amber Yaghi | Transformational Speaker & Author</title>
-        <meta name="description" content="Learn about Amber Yaghi's journey of transformation - from personal challenges to becoming an inspirational speaker and author of Mind Bending." />
+        <title>About Amber Yaghi | Author, Publisher & Speaker</title>
+        <meta name="description" content="Learn about Amber Yaghi — author of Mind Bending, Business Grants Are FREE99, and Quick Inquiry Removal Guide. Transformational speaker, publisher, and technologist." />
         <link rel="canonical" href="https://amberyaghi.org/about" />
       </Helmet>
       <div className="min-h-screen bg-brand-black">

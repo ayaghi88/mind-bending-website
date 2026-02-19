@@ -57,7 +57,7 @@ const AppCreation = () => {
                   </div>
                   <div>
                     <p className="text-brand-white/70 text-lg leading-relaxed mb-4">
-                      The 1st app tailored to teach neurodivergent people according to their specific learning needs. No walls of text — just clear, visual, step-by-step learning.
+                      A completely free learning platform built for neurodivergent minds. Every lesson is visual, structured, and adapted to how each learner best understands.
                     </p>
                     <Button
                       onClick={() => window.open('https://www.lovablelearner.com', '_blank')}
@@ -84,7 +84,7 @@ const AppCreation = () => {
                   </div>
                   <div>
                     <p className="text-brand-white/70 text-lg leading-relaxed mb-4">
-                      An AI academy for curious kids ages 7–16! Learn how Artificial Intelligence works through magical adventures with Scout the robot and friends — featuring stories, games, and projects.
+                      A fun and interactive academy where kids ages 7–16 discover how AI works through stories, games, and hands-on projects with Scout the robot and friends.
                     </p>
                     <Button
                       onClick={() => window.open('https://ai-academy.me', '_blank')}

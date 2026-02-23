@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import PageLayout from '@/components/PageLayout';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
@@ -6,6 +7,17 @@ import { Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Books = () => {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://payhip.com/embed-page.js?v=24u68985';
+    script.type = 'text/javascript';
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   const mindBendingRetailers = [
     { name: "Amazon", url: "https://www.amazon.com/s?k=amber+yaghi+mind+bending" },
     { name: "Barnes & Noble", url: "https://www.barnesandnoble.com/s/amber+yaghi" },
@@ -169,6 +181,11 @@ const Books = () => {
                       View on Amazon
                     </Button>
                   </div>
+                </div>
+
+                {/* Payhip Embed */}
+                <div className="mb-16">
+                  <div className="payhip-embed-page" data-key="CYUwG"></div>
                 </div>
 
                 {/* Review Request */}

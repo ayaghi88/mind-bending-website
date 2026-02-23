@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import PageLayout from '@/components/PageLayout';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
@@ -7,14 +7,20 @@ import { Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Books = () => {
+  const payhipRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
+    // Remove any existing payhip scripts to allow re-initialization
+    const existingScripts = document.querySelectorAll('script[src*="payhip.com/embed-page"]');
+    existingScripts.forEach(s => s.remove());
+
     const script = document.createElement('script');
-    script.src = 'https://payhip.com/embed-page.js?v=24u68985';
+    script.src = 'https://payhip.com/embed-page.js?v=' + Date.now();
     script.type = 'text/javascript';
     script.async = true;
     document.body.appendChild(script);
     return () => {
-      document.body.removeChild(script);
+      try { document.body.removeChild(script); } catch (e) {}
     };
   }, []);
 
@@ -184,7 +190,7 @@ const Books = () => {
                 </div>
 
                 {/* Payhip Embed */}
-                <div className="mb-16">
+                <div className="mb-16" ref={payhipRef}>
                   <div className="payhip-embed-page" data-key="CYUwG"></div>
                 </div>
 

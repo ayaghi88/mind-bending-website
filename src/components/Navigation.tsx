@@ -1,3 +1,4 @@
+import { useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const navItems = [
@@ -14,7 +15,16 @@ const navItems = [
 
 const Navigation = () => {
   const location = useLocation();
+  const scrollRef = useRef<HTMLDivElement>(null);
 
+  useEffect(() => {
+    if (scrollRef.current) {
+      const active = scrollRef.current.querySelector('[data-active="true"]');
+      if (active) {
+        active.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'instant' });
+      }
+    }
+  }, [location.pathname]);
   return (
     <>
       {/* Desktop left sidebar */}
@@ -48,12 +58,13 @@ const Navigation = () => {
             AMBER YAGHI
           </Link>
         </div>
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto" ref={scrollRef}>
           <div className="flex px-2 pb-2 gap-1 min-w-max">
             {navItems.map((item) => (
               <Link
                 key={item.label}
                 to={item.path}
+                data-active={location.pathname === item.path}
                 className={`whitespace-nowrap px-3 py-2 text-xs font-medium rounded-md transition-colors ${
                   location.pathname === item.path
                     ? 'bg-primary/10 text-primary font-semibold'

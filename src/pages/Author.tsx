@@ -30,11 +30,29 @@ const Author = () => {
         <link rel="canonical" href="https://amberyaghi.org/author" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "Person",
-          "name": "Amber Yaghi",
-          "url": "https://amberyaghi.org",
-          "jobTitle": "Author, Publisher, Technologist, Speaker",
-          "sameAs": ["https://github.com/ayaghi88","https://facebook.com/authoramberyaghi","https://tiktok.com/@authoramberyaghi","https://x.com/amber_yaghi"]
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "https://amberyaghi.org/#website",
+              "url": "https://amberyaghi.org/",
+              "name": "Amber Yaghi",
+              "inLanguage": "en",
+              "publisher": { "@id": "https://amberyaghi.org/#person" }
+            },
+            {
+              "@type": "Person",
+              "@id": "https://amberyaghi.org/#person",
+              "name": "Amber Yaghi",
+              "url": "https://amberyaghi.org/",
+              "image": "https://amberyaghi.org/lovable-uploads/amber-photo-1.jpeg",
+              "jobTitle": ["Author", "App Developer", "AI Strategist", "Speaker"],
+              "description": "Amber Yaghi is a published author, app developer, AI strategist, and speaker from Baker, Louisiana. She builds human-centered tools and publishing solutions at the intersection of writing, healthcare, technology, and identity work.",
+              "birthPlace": { "@type": "Place", "name": "Baker, Louisiana, United States" },
+              "knowsAbout": ["Self-publishing","Book publishing services","App development","AI strategy","DNS setup","Motivational speaking","Writing","Identity work"],
+              "sameAs": ["https://github.com/ayaghi88","https://facebook.com/authoramberyaghi","https://tiktok.com/@authoramberyaghi","https://x.com/amber_yaghi"],
+              "mainEntityOfPage": { "@type": "WebPage", "@id": "https://amberyaghi.org/author" }
+            }
+          ]
         })}</script>
       </Helmet>
       <PageLayout>
@@ -46,9 +64,11 @@ const Author = () => {
                 {/* Hero / Intro */}
                 <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mb-20">
                   <h1 className="font-playfair font-black text-4xl md:text-5xl text-brand-white mb-4">Amber Yaghi</h1>
-                  <p className="text-brand-red font-semibold text-lg mb-6">Author · Publisher · Creator · Technologist · Speaker</p>
-                  <p className="text-brand-white/70 text-lg leading-relaxed mb-4">Who's to say who's qualified and who isn't? I entered the world with all odds against me &amp; still persevered.</p>
-                  <p className="text-brand-white/70 leading-relaxed">A Baker, Louisiana native. I've been writing for as long as I can remember — poetry, love letters, journaling, you name it. I wrote an entire book of poems in middle school &amp; typed them up on my Brother's typewriter.</p>
+                  <p className="text-brand-red font-semibold text-lg mb-6">Author · App Developer · AI Strategist · Speaker</p>
+                  <p className="text-brand-white/70 text-lg leading-relaxed mb-4">Amber Yaghi is a published author, app developer, AI strategist, and founder of Shrink And Send, Text Detox Alchemy, Lovable Learner, &amp; a plethora of digital tools. Best known for <em>Mind Bending: The Quantum Reality Strategist</em>, she creates trauma-informed curriculum, innovative digital tools, and technology solutions that blend writing, identity work, and human-centered design.</p>
+                  <p className="text-brand-white/70 leading-relaxed mb-4">A native of Baker, Louisiana, Amber has been writing since childhood — from poetry and journals to full books — and has long been trusted to craft meaningful memorial and obituary poems. Her authentic voice and creative vision have made her a sought-after storyteller and speaker.</p>
+                  <p className="text-brand-white/70 leading-relaxed mb-4">Driven by legacy and purpose, Amber builds and launches apps, helps authors publish with clarity and confidence, and offers expert services in publishing strategy, DNS setup, and digital brand development.</p>
+                  <p className="text-brand-white/70 leading-relaxed">Today, everything Amber builds sits at the intersection of writing, healthcare, technology, and identity work — empowering individuals and organizations to evolve, create impact, and rewrite their narratives.</p>
                 </motion.div>
 
                 {/* Photo Gallery */}
@@ -66,19 +86,6 @@ const Author = () => {
                   </div>
                 </motion.section>
 
-                {/* Full Bio */}
-                <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-20">
-                  <div className="max-w-3xl mx-auto">
-                    <div className="space-y-6 text-brand-white/75 leading-relaxed text-lg">
-                      <p>Well into adulthood, whenever someone passed away, a classmate or old friend would reach out for me to write a poem for the person's obituary. I'd have it to them in no time, with the nicknames or special memories they'd requested I add. It made me feel worth something, to be able to author someone's going away poem or even be considered to do so!</p>
-                      <p>Writing is what I was known for, before deciding who I wanted to be. It's the one skill I never had to learn; I was created for that purpose! My only God-given talent. Even as social media became popular over the years, I still remained an original creator. I'd share someone else's post, but I could never do the copy &amp; paste thing. I had to create my own, from the heart!</p>
-                      <p>I entered the world a double minority. I'm covered in tattoos, self-expressive, super passionate, nonconforming, &amp; naturally loud. I'm a proud lame. I shockingly became a high school dropout after being an A/B honor roll student most of my life. My path did not look traditional, but it was intentional.</p>
-                      <p>I entered the workforce as a healthcare worker, driven by a genuine love for helping people. From there, I expanded into becoming a self-published author, app developer, and AI strategist. When I published <em>Mind Bending: The Quantum Reality Strategist</em>, I created the tools and processes I wished existed along the way. That pushed me deeper into technology and innovation.</p>
-                      <p className="font-semibold text-brand-white">Everything I build today sits at the intersection of writing, healthcare, technology, and identity work.</p>
-                      <p>My Yaghi fam is my driving force. Legacy is the reason I create, the reason I build, and the reason I refuse to play small.</p>
-                    </div>
-                  </div>
-                </motion.section>
 
                 {/* Bibliography */}
                 <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-20">

@@ -44,22 +44,25 @@ const Author = () => {
               <div className="max-w-5xl mx-auto">
 
                 {/* Hero / Intro */}
-                <div className="grid md:grid-cols-2 gap-12 mb-20 items-center">
-                  <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
-                    <img src="/lovable-uploads/amber-portrait-2.jpeg" alt="Amber Yaghi — author portrait" className="rounded-xl shadow-lg w-full object-cover max-h-[550px]" />
-                  </motion.div>
-                  <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.15 }}>
-                    <h1 className="font-playfair font-black text-4xl md:text-5xl text-brand-white mb-4">Amber Yaghi</h1>
-                    <p className="text-brand-red font-semibold text-lg mb-6">Author · Publisher · Creator · Technologist · Speaker</p>
-                    <p className="text-brand-white/70 text-lg leading-relaxed mb-4">Who's to say who's qualified and who isn't? I entered the world with all odds against me &amp; still persevered.</p>
-                    <p className="text-brand-white/70 leading-relaxed">A Baker, Louisiana native. I've been writing for as long as I can remember — poetry, love letters, journaling, you name it. I wrote an entire book of poems in middle school &amp; typed them up on my Brother's typewriter.</p>
-                  </motion.div>
-                </div>
+                <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mb-20">
+                  <h1 className="font-playfair font-black text-4xl md:text-5xl text-brand-white mb-4">Amber Yaghi</h1>
+                  <p className="text-brand-red font-semibold text-lg mb-6">Author · Publisher · Creator · Technologist · Speaker</p>
+                  <p className="text-brand-white/70 text-lg leading-relaxed mb-4">Who's to say who's qualified and who isn't? I entered the world with all odds against me &amp; still persevered.</p>
+                  <p className="text-brand-white/70 leading-relaxed">A Baker, Louisiana native. I've been writing for as long as I can remember — poetry, love letters, journaling, you name it. I wrote an entire book of poems in middle school &amp; typed them up on my Brother's typewriter.</p>
+                </motion.div>
 
-                {/* Video */}
+                {/* Photo Gallery */}
                 <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-20">
-                  <div className="max-w-2xl mx-auto">
-                    <video src="/lovable-uploads/amber-video.mp4" controls playsInline className="w-full rounded-xl shadow-lg" poster="/lovable-uploads/amber-portrait-2.jpeg" />
+                  <h2 className="font-playfair font-bold text-3xl text-brand-white mb-8">Gallery</h2>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    {[
+                      { src: "/lovable-uploads/amber-photo-1.jpeg", alt: "Amber Yaghi portrait" },
+                      { src: "/lovable-uploads/amber-photo-2.jpeg", alt: "Amber Yaghi casual" },
+                      { src: "/lovable-uploads/amber-photo-3.jpeg", alt: "Amber Yaghi reading" },
+                      { src: "/lovable-uploads/amber-photo-4.jpeg", alt: "Amber Yaghi professional" },
+                    ].map((photo) => (
+                      <img key={photo.src} src={photo.src} alt={photo.alt} className="rounded-xl shadow-lg w-full aspect-[3/4] object-cover" />
+                    ))}
                   </div>
                 </motion.section>
 

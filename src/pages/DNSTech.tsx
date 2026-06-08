@@ -39,7 +39,7 @@ const DNSTech = () => {
                     </div>
                   ))}
                 </div>
-                <Link to="/contact"><Button className="bg-brand-red hover:bg-brand-red/90 text-white font-bold px-8 py-4 text-lg hover-glow">Request DNS Setup →</Button></Link>
+                <p className="text-brand-white/50 text-lg italic">Not currently accepting new requests for this service.</p>
               </div>
             </div>
           </div>

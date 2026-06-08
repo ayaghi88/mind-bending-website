@@ -55,7 +55,6 @@ const AppCreation = () => {
                   </div>
                 </div>
 
-
                 {/* Featured App: Shrink & Send */}
                 <div className="bg-white border border-border rounded-lg p-8 mb-12 shadow-sm">
                   <h2 className="font-playfair font-bold text-2xl md:text-3xl text-brand-white mb-6">Featured App: Shrink & Send</h2>

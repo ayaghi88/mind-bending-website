@@ -43,6 +43,17 @@ const AppCreation = () => {
                   ))}
                 </div>
 
+                {/* App Hub */}
+                <div className="bg-white border border-border rounded-lg p-8 mb-12 shadow-sm">
+                  <h2 className="font-playfair font-bold text-2xl md:text-3xl text-brand-white mb-6">App Hub: Embercore Studio</h2>
+                  <div className="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                      <p className="text-brand-white/70 text-lg leading-relaxed mb-4">The central home for all created apps and digital tools. Explore the complete collection of applications built for authors, educators, and creators.</p>
+                      <Button onClick={() => window.open('https://embercorestudio.org', '_blank')} className="bg-brand-red hover:bg-brand-red/90 text-white font-bold px-6 py-3 hover-glow">Visit Embercore Studio →</Button>
+                    </div>
+                  </div>
+                </div>
+
                 {/* Featured App: Lovable Learner */}
                 <div className="bg-white border border-border rounded-lg p-8 mb-12 shadow-sm">
                   <h2 className="font-playfair font-bold text-2xl md:text-3xl text-brand-white mb-6">Featured App: Lovable Learner</h2>

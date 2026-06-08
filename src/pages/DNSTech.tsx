@@ -1,9 +1,7 @@
 import PageLayout from '@/components/PageLayout';
 import Footer from '@/components/Footer';
-import { Button } from '@/components/ui/button';
 import { Helmet } from 'react-helmet-async';
 import { Globe, Mail, Server, Wrench } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const DNSTech = () => {
   const services = [

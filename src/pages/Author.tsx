@@ -49,7 +49,7 @@ const Author = () => {
               "description": "Amber Yaghi is a published author, app developer, AI strategist, and speaker from Baker, Louisiana. She builds human-centered tools and publishing solutions at the intersection of writing, healthcare, technology, and identity work.",
               "birthPlace": { "@type": "Place", "name": "Baker, Louisiana, United States" },
               "knowsAbout": ["Self-publishing","Book publishing services","App development","AI strategy","DNS setup","Motivational speaking","Writing","Identity work"],
-              "sameAs": ["https://github.com/ayaghi88","https://facebook.com/authoramberyaghi","https://tiktok.com/@authoramberyaghi","https://x.com/amber_yaghi"],
+              "sameAs": ["https://github.com/ayaghi88"],
               "mainEntityOfPage": { "@type": "WebPage", "@id": "https://amberyaghi.org/author" }
             }
           ]

@@ -134,9 +134,6 @@ const Contact = () => {
                     <div>
                       <h3 className="font-playfair text-xl text-brand-white mb-3">Connect</h3>
                       <div className="space-y-2">
-                        <a href="https://facebook.com/authoramberyaghi" target="_blank" rel="noopener noreferrer" className="block text-brand-white/60 hover:text-brand-red transition-colors">Facebook</a>
-                        <a href="https://tiktok.com/@authoramberyaghi" target="_blank" rel="noopener noreferrer" className="block text-brand-white/60 hover:text-brand-red transition-colors">TikTok</a>
-                        <a href="https://x.com/amber_yaghi" target="_blank" rel="noopener noreferrer" className="block text-brand-white/60 hover:text-brand-red transition-colors">X (Twitter)</a>
                         <a href="https://github.com/ayaghi88" target="_blank" rel="noopener noreferrer" className="block text-brand-white/60 hover:text-brand-red transition-colors">GitHub</a>
                       </div>
                     </div>

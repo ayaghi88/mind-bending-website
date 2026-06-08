@@ -28,9 +28,6 @@ const Index = () => {
             "description": "Author, publisher, creator, and technologist providing ethical, transparent publishing and digital services for authors and thought leaders.",
             "email": "amber@amberyaghi.org",
             "sameAs": [
-              "https://facebook.com/authoramberyaghi",
-              "https://tiktok.com/@authoramberyaghi",
-              "https://x.com/amber_yaghi",
               "https://github.com/ayaghi88"
             ]
           })}

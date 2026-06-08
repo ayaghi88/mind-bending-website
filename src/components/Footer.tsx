@@ -35,11 +35,7 @@ const Footer = () => {
             <div className="flex flex-col space-y-2">
               <a href="mailto:amber@amberyaghi.org" className="text-brand-white/60 hover:text-brand-red transition-colors text-sm">amber@amberyaghi.org</a>
               <a href="mailto:contact@amberyaghi.org" className="text-brand-white/60 hover:text-brand-red transition-colors text-sm">contact@amberyaghi.org</a>
-              <a href="https://facebook.com/authoramberyaghi" target="_blank" rel="noopener noreferrer" className="text-brand-white/60 hover:text-brand-red transition-colors text-sm">Facebook</a>
-              <a href="https://tiktok.com/@authoramberyaghi" target="_blank" rel="noopener noreferrer" className="text-brand-white/60 hover:text-brand-red transition-colors text-sm">TikTok</a>
-              <a href="https://x.com/amber_yaghi" target="_blank" rel="noopener noreferrer" className="text-brand-white/60 hover:text-brand-red transition-colors text-sm">X (Twitter)</a>
               <a href="https://github.com/ayaghi88" target="_blank" rel="noopener noreferrer" className="text-brand-white/60 hover:text-brand-red transition-colors text-sm">GitHub</a>
-              <a href="https://linker.ee/ThisIsTheLinkInMyBio" target="_blank" rel="noopener noreferrer" className="text-brand-white/60 hover:text-brand-red transition-colors text-sm">All My Links</a>
             </div>
           </div>
         </motion.div>

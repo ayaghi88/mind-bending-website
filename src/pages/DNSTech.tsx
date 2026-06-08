@@ -1,9 +1,7 @@
 import PageLayout from '@/components/PageLayout';
 import Footer from '@/components/Footer';
-import { Button } from '@/components/ui/button';
 import { Helmet } from 'react-helmet-async';
 import { Globe, Mail, Server, Wrench } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const DNSTech = () => {
   const services = [
@@ -26,6 +24,9 @@ const DNSTech = () => {
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
                 <h1 className="font-playfair font-black text-4xl md:text-5xl lg:text-6xl text-brand-white mb-6 animate-fade-in">DNS & Technical Setup</h1>
+                <div className="bg-brand-red/10 border border-brand-red/30 rounded-lg p-4 mb-8 animate-slide-in-left">
+                  <p className="text-brand-red font-semibold text-lg">Currently booked up — not accepting new DNS / tech setup requests at this time.</p>
+                </div>
                 <p className="text-brand-white/70 text-lg md:text-xl leading-relaxed mb-12 animate-slide-in-left">Amber Yaghi offers technical setup services to help creators and businesses establish a reliable digital foundation.</p>
                 <div className="grid md:grid-cols-2 gap-6 mb-12">
                   {services.map((item) => (
@@ -36,7 +37,7 @@ const DNSTech = () => {
                     </div>
                   ))}
                 </div>
-                <Link to="/contact"><Button className="bg-brand-red hover:bg-brand-red/90 text-white font-bold px-8 py-4 text-lg hover-glow">Request DNS Setup →</Button></Link>
+                <p className="text-brand-white/50 text-lg italic">Not currently accepting new requests for this service.</p>
               </div>
             </div>
           </div>

@@ -24,7 +24,7 @@ const Index = () => {
             "@type": "Person",
             "name": "Amber Yaghi",
             "url": "https://amberyaghi.org",
-            "jobTitle": "Author, Publisher, Creator, Technologist, Speaker",
+            "jobTitle": "Author, Publisher, Creator, Technologist, Speaker, Actress",
             "description": "Author, publisher, creator, and technologist providing ethical, transparent publishing and digital services for authors and thought leaders.",
             "email": "amber@amberyaghi.org",
             "sameAs": [

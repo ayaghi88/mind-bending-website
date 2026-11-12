@@ -24,15 +24,6 @@ const Books = () => {
     };
   }, []);
 
-  const mindBendingRetailers = [
-    { name: "Amazon", url: "https://www.amazon.com/s?k=amber+yaghi+mind+bending" },
-    { name: "Barnes & Noble", url: "https://www.barnesandnoble.com/s/amber+yaghi" },
-    { name: "Lulu", url: "https://www.lulu.com/shop/amber-yaghi/mind-bending-the-quantum-reality-strategist/paperback/product-45ympe6.html" },
-    { name: "Walmart", url: "https://www.walmart.com/ip/16828660779?sid=2bdcd3ab-8220-4390-ba8e-891671c8297a" },
-    { name: "Books-A-Million", url: "https://www.booksamillion.com/p/Mind-Bending/Amber-Yaghi/9781300224419" },
-    { name: "eBay", url: "https://www.ebay.com/sch/i.html?_nkw=mind+bending+the+quantum+reality+strategist&_sop=12" },
-  ];
-
   return (
     <>
       <Helmet>
@@ -134,17 +125,11 @@ const Books = () => {
                       </p>
                     </div>
 
-                    <div className="flex flex-wrap gap-3 mb-8">
-                      {mindBendingRetailers.map((r) => (
-                        <Button
-                          key={r.name}
-                          variant="outline"
-                          onClick={() => window.open(r.url, '_blank')}
-                          className="border-brand-red/50 text-brand-white hover:bg-brand-red/10"
-                        >
-                          {r.name}
-                        </Button>
-                      ))}
+                    <div className="mb-8">
+                      <lulu-buy-button
+                        buy-button-id="0e0159d4-0328-46cc-ba8d-2f24055f262f"
+                        variant="product-showcase"
+                      ></lulu-buy-button>
                     </div>
                   </div>
                 </div>

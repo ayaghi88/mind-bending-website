@@ -26,7 +26,7 @@ const Author = () => {
     <>
       <Helmet>
         <title>About the Author | Amber Yaghi</title>
-        <meta name="description" content="Meet Amber Yaghi — author, publisher, app developer, and AI strategist from Baker, Louisiana. Read her story, bibliography, and find her books worldwide." />
+        <meta name="description" content="Meet Amber Yaghi — author, publisher, app developer, AI strategist, and actress from Baker, Louisiana. Read her story, bibliography, and find her books worldwide." />
         <link rel="canonical" href="https://amberyaghi.org/author" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
@@ -45,11 +45,11 @@ const Author = () => {
               "name": "Amber Yaghi",
               "url": "https://amberyaghi.org/",
               "image": "https://amberyaghi.org/lovable-uploads/amber-photo-1.jpeg",
-              "jobTitle": ["Author", "App Developer", "AI Strategist", "Speaker"],
+              "jobTitle": ["Author", "App Developer", "AI Strategist", "Speaker", "Actress"],
               "description": "Amber Yaghi is a published author, app developer, AI strategist, and speaker from Baker, Louisiana. She builds human-centered tools and publishing solutions at the intersection of writing, healthcare, technology, and identity work.",
               "birthPlace": { "@type": "Place", "name": "Baker, Louisiana, United States" },
               "knowsAbout": ["Self-publishing","Book publishing services","App development","AI strategy","DNS setup","Motivational speaking","Writing","Identity work"],
-              "sameAs": ["https://github.com/ayaghi88"],
+              "sameAs": ["https://github.com/ayaghi88", "https://pro.imdb.com/?rf=cons_nm_meter&ref_=nmovr_pub_upslb_login&rf=cons_nm_meter"],
               "mainEntityOfPage": { "@type": "WebPage", "@id": "https://amberyaghi.org/author" }
             }
           ]
@@ -64,7 +64,7 @@ const Author = () => {
                 {/* Hero / Intro */}
                 <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mb-20">
                   <h1 className="font-playfair font-black text-4xl md:text-5xl text-brand-white mb-4">Amber Yaghi</h1>
-                  <p className="text-brand-red font-semibold text-lg mb-6">Author · App Developer · AI Strategist · Speaker</p>
+                  <p className="text-brand-red font-semibold text-lg mb-6">Author · App Developer · AI Strategist · Speaker · Actress</p>
                   <p className="text-brand-white/70 text-lg leading-relaxed mb-4">Amber Yaghi is a published author, app developer, AI strategist, and founder of a plethora of digital tools and apps. Best known for <em>Mind Bending: The Quantum Reality Strategist</em>, she creates trauma-informed curriculum, innovative digital tools, and technology solutions that blend writing, identity work, and human-centered design.</p>
                   <p className="text-brand-white/70 leading-relaxed mb-4">A native of Baker, Louisiana, Amber has been writing since childhood — from poetry and journals to full books — and has long been trusted to craft meaningful memorial and obituary poems. Her authentic voice and creative vision have made her a sought-after storyteller and speaker.</p>
                   <p className="text-brand-white/70 leading-relaxed mb-4">Driven by legacy and purpose, Amber builds and launches apps, helps authors publish with clarity and confidence, and offers expert services in publishing strategy, DNS setup, and digital brand development.</p>
@@ -110,6 +110,20 @@ const Author = () => {
                     {retailers.map((r) => (
                       <a key={r.name} href={r.url} target="_blank" rel="noopener noreferrer" className="bg-white border border-border rounded-lg px-5 py-3 text-brand-white hover:border-brand-red hover:text-brand-red transition-all text-sm font-semibold">{r.name}</a>
                     ))}
+                  </div>
+                </motion.section>
+
+                {/* On Screen */}
+                <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-20">
+                  <h2 className="font-playfair font-bold text-3xl text-brand-white mb-4">On Screen</h2>
+                  <p className="text-brand-white/60 mb-8">Amber is also an actress — follow her film work and check out her first movie.</p>
+                  <div className="flex flex-wrap gap-4">
+                    <a href="https://pro.imdb.com/?rf=cons_nm_meter&ref_=nmovr_pub_upslb_login&rf=cons_nm_meter" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-white border border-border rounded-lg px-6 py-3 text-brand-white hover:border-brand-red hover:text-brand-red transition-all text-sm font-semibold">
+                      IMDb Profile <ExternalLink className="w-4 h-4" />
+                    </a>
+                    <a href="https://pro.imdb.com/?rf=cons_nm_meter&ref_=nmovr_pub_upslb_login&rf=cons_nm_meter" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-white border border-border rounded-lg px-6 py-3 text-brand-white hover:border-brand-red hover:text-brand-red transition-all text-sm font-semibold">
+                      Watch Her First Movie <ExternalLink className="w-4 h-4" />
+                    </a>
                   </div>
                 </motion.section>
 

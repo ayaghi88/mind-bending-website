@@ -49,7 +49,7 @@ const Author = () => {
               "description": "Amber Yaghi is a published author, app developer, AI strategist, and speaker from Baker, Louisiana. She builds human-centered tools and publishing solutions at the intersection of writing, healthcare, technology, and identity work.",
               "birthPlace": { "@type": "Place", "name": "Baker, Louisiana, United States" },
               "knowsAbout": ["Self-publishing","Book publishing services","App development","AI strategy","DNS setup","Motivational speaking","Writing","Identity work"],
-              "sameAs": ["https://github.com/ayaghi88", "https://pro.imdb.com/?rf=cons_nm_meter&ref_=nmovr_pub_upslb_login&rf=cons_nm_meter"],
+              "sameAs": ["https://github.com/ayaghi88", "https://imdb.me/amberyaghi"],
               "mainEntityOfPage": { "@type": "WebPage", "@id": "https://amberyaghi.org/author" }
             }
           ]
@@ -118,10 +118,10 @@ const Author = () => {
                   <h2 className="font-playfair font-bold text-3xl text-brand-white mb-4">On Screen</h2>
                   <p className="text-brand-white/60 mb-8">Amber is also an actress — follow her film work and check out her first movie.</p>
                   <div className="flex flex-wrap gap-4">
-                    <a href="https://pro.imdb.com/?rf=cons_nm_meter&ref_=nmovr_pub_upslb_login&rf=cons_nm_meter" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-white border border-border rounded-lg px-6 py-3 text-brand-white hover:border-brand-red hover:text-brand-red transition-all text-sm font-semibold">
+                    <a href="https://imdb.me/amberyaghi" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-white border border-border rounded-lg px-6 py-3 text-brand-white hover:border-brand-red hover:text-brand-red transition-all text-sm font-semibold">
                       IMDb Profile <ExternalLink className="w-4 h-4" />
                     </a>
-                    <a href="https://pro.imdb.com/?rf=cons_nm_meter&ref_=nmovr_pub_upslb_login&rf=cons_nm_meter" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-white border border-border rounded-lg px-6 py-3 text-brand-white hover:border-brand-red hover:text-brand-red transition-all text-sm font-semibold">
+                    <a href="https://watchonrelay.com/app/t/ezwk-wgrm" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-white border border-border rounded-lg px-6 py-3 text-brand-white hover:border-brand-red hover:text-brand-red transition-all text-sm font-semibold">
                       Watch Her First Movie <ExternalLink className="w-4 h-4" />
                     </a>
                   </div>

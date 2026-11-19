@@ -18,6 +18,8 @@ import Author from "./pages/Author";
 import Reviews from "./pages/Reviews";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
+import AccidentalGroupie from "./pages/AccidentalGroupie";
+import Actor from "./pages/Actor";
 
 const queryClient = new QueryClient();
 
@@ -41,6 +43,8 @@ const App = () => (
             <Route path="/dns-tech" element={<DNSTech />} />
             <Route path="/speaking" element={<Speaking />} />
             <Route path="/author" element={<Author />} />
+            <Route path="/the-accidental-groupie" element={<AccidentalGroupie />} />
+            <Route path="/actor" element={<Actor />} />
             <Route path="/reviews" element={<Reviews />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

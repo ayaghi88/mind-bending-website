@@ -92,11 +92,10 @@ const Books = () => {
                 {/* Featured Book: Mind Bending */}
                 <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
                   <div className="animate-slide-in-left">
-                    <img
-                      src="/lovable-uploads/306fefdf-2cf7-4ab6-a6b2-755e7339112a.png"
-                      alt="Mind Bending: The Quantum Reality Strategist by Amber Yaghi"
-                      className="w-full max-w-md mx-auto shadow-2xl border-glow rounded-lg"
-                    />
+                    <lulu-buy-button
+                      buy-button-id="0e0159d4-0328-46cc-ba8d-2f24055f262f"
+                      variant="product-showcase"
+                    ></lulu-buy-button>
                   </div>
 
                   <div className="animate-slide-in-right">
@@ -125,12 +124,6 @@ const Books = () => {
                       </p>
                     </div>
 
-                    <div className="mb-8">
-                      <lulu-buy-button
-                        buy-button-id="0e0159d4-0328-46cc-ba8d-2f24055f262f"
-                        variant="product-showcase"
-                      ></lulu-buy-button>
-                    </div>
                   </div>
                 </div>
 

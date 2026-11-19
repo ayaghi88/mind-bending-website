@@ -1,0 +1,6 @@
+- [x] Add The Accidental Groupie page from the uploaded content.
+- [x] Move acting information to an Actor tab.
+- [x] Remove duplicate Mind Bending cover displays.
+- [x] Update and validate the sitemap and navigation.
+- [x] Verify the new pages on mobile and desktop.
+- [ ] Connect the reader signup service (waiting for the user's signup link; email requests available meanwhile).

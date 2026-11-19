@@ -12,11 +12,10 @@ const BookSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <img 
-              src="/lovable-uploads/306fefdf-2cf7-4ab6-a6b2-755e7339112a.png" 
-              alt="Mind Bending: The Quantum Reality Strategist by Amber Yaghi"
-              className="w-full max-w-md mx-auto shadow-2xl border-glow rounded-lg hover:scale-105 transition-transform duration-500"
-            />
+            <lulu-buy-button
+              buy-button-id="0e0159d4-0328-46cc-ba8d-2f24055f262f"
+              variant="product-showcase"
+            ></lulu-buy-button>
           </motion.div>
           
           <motion.div
@@ -51,10 +50,6 @@ const BookSection = () => {
               </p>
             </div>
             
-            <lulu-buy-button
-              buy-button-id="0e0159d4-0328-46cc-ba8d-2f24055f262f"
-              variant="product-showcase"
-            ></lulu-buy-button>
           </motion.div>
         </div>
       </div>

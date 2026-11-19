@@ -5,6 +5,8 @@ const navItems = [
   { label: 'Home', path: '/' },
   { label: 'Author', path: '/author' },
   { label: 'Books', path: '/books' },
+  { label: 'The Accidental Groupie', path: '/the-accidental-groupie' },
+  { label: 'Actor', path: '/actor' },
   { label: 'Publishing Services', path: '/publishing' },
   { label: 'App Creation', path: '/apps' },
   { label: 'DNS & Tech Setup', path: '/dns-tech' },

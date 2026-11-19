@@ -24,7 +24,7 @@ const AccidentalGroupie = () => (
             <h2 className="font-playfair font-bold text-2xl mb-4">Get Chapter One Before Release Day</h2>
             <p className="text-muted-foreground leading-relaxed mb-6">Receive the opening chapter straight to your inbox—plus behind-the-scenes updates from the page to the screen.</p>
             <Button asChild size="lg" className="h-auto min-h-11 whitespace-normal text-center">
-              <a href="mailto:amber@amberyaghi.org?subject=The%20Accidental%20Groupie%20%E2%80%94%20Reader%20List&body=Please%20add%20me%20to%20the%20reader%20list%20for%20The%20Accidental%20Groupie%20and%20send%20Chapter%20One%20when%20available."><Mail /> Request Chapter One by Email</a>
+              <a href="mailto:contact@amberyaghi.org?subject=The%20Accidental%20Groupie%20%E2%80%94%20Reader%20List&body=Please%20add%20me%20to%20the%20reader%20list%20for%20The%20Accidental%20Groupie%20and%20send%20Chapter%20One%20when%20available."><Mail /> Request Chapter One by Email</a>
             </Button>
           </div>
         </section>

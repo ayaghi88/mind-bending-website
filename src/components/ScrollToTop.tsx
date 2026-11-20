@@ -1,17 +1,13 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { scrollPageToTop } from '@/lib/navigation-scroll';
 
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
+  const { key } = useLocation();
 
   useEffect(() => {
-    // Only scroll to top on desktop where sidebar nav is used
-    // On mobile, the fixed top nav is always accessible so no need to scroll
-    const isDesktop = window.matchMedia('(min-width: 768px)').matches;
-    if (isDesktop) {
-      window.scrollTo(0, 0);
-    }
-  }, [pathname]);
+    scrollPageToTop(window);
+  }, [key]);
 
   return null;
 };

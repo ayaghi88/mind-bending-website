@@ -53,7 +53,7 @@ const Index = () => {
               <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                 {[
                   { title: "Publishing Services", desc: "Author-first publishing with transparent pricing and full ownership.", link: "/publishing" },
-                  { title: "App Creation", desc: "Custom apps and digital tools for authors, educators, and creators.", link: "/apps" },
+                  { title: "App Creation", desc: "Currently fully booked — no app creation slots available. Explore existing apps and digital tools.", link: "/apps" },
                   { title: "Speaking & Media", desc: "Keynotes, panels, podcasts, and workshops on publishing, AI, and ownership.", link: "/speaking" },
                 ].map((s, i) => (
                   <motion.div

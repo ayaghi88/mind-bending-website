@@ -34,9 +34,8 @@ const Author = () => {
               "@id": "https://amberyaghi.org/#person",
               "name": "Amber Yaghi",
               "url": "https://amberyaghi.org/",
-              "image": "https://amberyaghi.org/lovable-uploads/amber-photo-1.jpeg",
-              "jobTitle": ["Author", "App Developer", "AI Strategist", "Speaker", "Actress"],
-              "description": "Amber Yaghi is a published author, app developer, AI strategist, and speaker from Baker, Louisiana. She builds human-centered tools and publishing solutions at the intersection of writing, healthcare, technology, and identity work.",
+                            "jobTitle": ["Author", "App Developer", "AI Strategist", "Speaker", "Actress"],
+              "description": "Amber Yaghi is a quantum disruptor, street scholar, and the unapologetic mind behind Mind Bending: The Quantum Reality Strategist.",
               "birthPlace": { "@type": "Place", "name": "Baker, Louisiana, United States" },
               "knowsAbout": ["Self-publishing","Book publishing services","App development","AI strategy","DNS setup","Motivational speaking","Writing","Identity work"],
               "sameAs": ["https://github.com/ayaghi88", "https://imdb.me/amberyaghi"],
@@ -55,27 +54,10 @@ const Author = () => {
                 <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mb-20">
                   <h1 className="font-playfair font-black text-4xl md:text-5xl text-brand-white mb-4">Amber Yaghi</h1>
                   <p className="text-brand-red font-semibold text-lg mb-6">Author · App Developer · AI Strategist · Speaker · Actress</p>
-                  <p className="text-brand-white/70 text-lg leading-relaxed mb-4">Amber Yaghi is a published author, app developer, AI strategist, and founder of a plethora of digital tools and apps. Best known for <em>Mind Bending: The Quantum Reality Strategist</em>, she creates trauma-informed curriculum, innovative digital tools, and technology solutions that blend writing, identity work, and human-centered design.</p>
-                  <p className="text-brand-white/70 leading-relaxed mb-4">A native of Baker, Louisiana, Amber has been writing since childhood — from poetry and journals to full books — and has long been trusted to craft meaningful memorial and obituary poems. Her authentic voice and creative vision have made her a sought-after storyteller and speaker.</p>
-                  <p className="text-brand-white/70 leading-relaxed mb-4">Driven by legacy and purpose, Amber builds and launches apps, helps authors publish with clarity and confidence, and offers expert services in publishing strategy, DNS setup, and digital brand development.</p>
-                  <p className="text-brand-white/70 leading-relaxed">Today, everything Amber builds sits at the intersection of writing, healthcare, technology, and identity work — empowering individuals and organizations to evolve, create impact, and rewrite their narratives.</p>
+                  <p className="text-muted-foreground text-lg leading-relaxed mb-4">Amber Yaghi is a quantum disruptor, street scholar, and the unapologetic mind behind <em>Mind Bending: The Quantum Reality Strategist</em>. Half Palestinian, half Black, and 100% her own lane, Amber blends metaphysics with real-world resilience to help people manifest, heal, and elevate. A high school dropout turned healthcare strategist and AI educator, she’s helped hundreds land jobs, rewrite their narratives, and monetize their mind.</p>
+                  <p className="text-muted-foreground text-lg leading-relaxed mb-4">Her book isn’t just paper — it’s power. It’s for the misjudged, the overlooked, the visionaries too bold for boxes.</p>
+                  <p className="text-muted-foreground text-lg leading-relaxed">Amber is the founder of HUSHLA AI™, The 9 to 5 Dating Pool, Text Detox, Shrink &amp; Send, and a growing library of digital tools for healing, hustling, and higher thinking. With tattoos, trauma, and tenacity, she turns her pain into blueprints — and invites you to do the same.</p>
                 </motion.div>
-
-                {/* Photo Gallery */}
-                <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-20">
-                  <h2 className="font-playfair font-bold text-3xl text-brand-white mb-8">Gallery</h2>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    {[
-                      { src: "/lovable-uploads/amber-photo-1.jpeg", alt: "Amber Yaghi portrait" },
-                      { src: "/lovable-uploads/amber-photo-2.jpeg", alt: "Amber Yaghi casual" },
-                      { src: "/lovable-uploads/amber-photo-3.jpeg", alt: "Amber Yaghi reading" },
-                      { src: "/lovable-uploads/amber-photo-4.jpeg", alt: "Amber Yaghi professional" },
-                    ].map((photo) => (
-                      <img key={photo.src} src={photo.src} alt={photo.alt} className="rounded-xl shadow-lg w-full aspect-[3/4] object-cover" />
-                    ))}
-                  </div>
-                </motion.section>
-
 
                 {/* Bibliography */}
                 <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-20">

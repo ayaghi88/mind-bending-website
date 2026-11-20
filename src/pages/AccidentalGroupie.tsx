@@ -3,12 +3,13 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Helmet } from 'react-helmet-async';
 import { Mail, ExternalLink } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const AccidentalGroupie = () => (
   <>
     <Helmet>
       <title>The Accidental Groupie — Debut Novel by Amber Yaghi</title>
-      <meta name="description" content="The Accidental Groupie, the upcoming debut novel by author and screenwriter Amber Yaghi. Reader updates, the official cover reveal, and Chapter One." />
+      <meta name="description" content="The Accidental Groupie, the upcoming debut novel by author Amber Yaghi. Reader updates, the official cover reveal, and Chapter One." />
       <link rel="canonical" href="https://amberyaghi.org/the-accidental-groupie" />
     </Helmet>
     <PageLayout>
@@ -17,15 +18,16 @@ const AccidentalGroupie = () => (
           <p className="text-primary font-semibold text-sm mb-5">Upcoming Debut Novel · Ember Core Studio</p>
           <h1 className="font-playfair font-bold text-4xl md:text-5xl leading-tight mb-6">The Accidental Groupie</h1>
           <p className="font-playfair italic text-xl md:text-2xl leading-relaxed mb-8">She never planned to be backstage. Now she can’t walk away.</p>
-          <p className="text-muted-foreground text-lg leading-relaxed">Written by Amber Yaghi—author, screenwriter, and creator—<em>The Accidental Groupie</em> is a gripping, big-screen story currently in progress. Join the private reader list for exclusive updates, the official cover reveal, and a free advance copy of Chapter One.</p>
+          <p className="text-muted-foreground text-lg leading-relaxed">Written by Amber Yaghi—author and creator—<em>The Accidental Groupie</em> is a gripping, big-screen story currently in progress. Request exclusive updates, the official cover reveal, and a free advance copy of Chapter One by email.</p>
         </section>
         <section className="bg-muted/50 border-y border-border">
           <div className="max-w-3xl mx-auto px-6 py-12">
             <h2 className="font-playfair font-bold text-2xl mb-4">Get Chapter One Before Release Day</h2>
             <p className="text-muted-foreground leading-relaxed mb-6">Receive the opening chapter straight to your inbox—plus behind-the-scenes updates from the page to the screen.</p>
             <Button asChild size="lg" className="h-auto min-h-11 whitespace-normal text-center">
-              <a href="mailto:contact@amberyaghi.org?subject=The%20Accidental%20Groupie%20%E2%80%94%20Reader%20List&body=Please%20add%20me%20to%20the%20reader%20list%20for%20The%20Accidental%20Groupie%20and%20send%20Chapter%20One%20when%20available."><Mail /> Request Chapter One by Email</a>
+              <a href="mailto:contact@amberyaghi.org?subject=The%20Accidental%20Groupie%20%E2%80%94%20Chapter%20One&body=Please%20send%20me%20Chapter%20One%20of%20The%20Accidental%20Groupie%20when%20available."><Mail /> Request Chapter One by Email</a>
             </Button>
+            <p className="text-muted-foreground text-sm leading-relaxed mt-4">Your email is used to send the chapter and respond to your request. For optional reader updates, ask to receive them in your message; you can stop them anytime by replying “unsubscribe.” Read our <Link to="/terms-privacy" className="text-primary underline">Terms &amp; Privacy</Link>.</p>
           </div>
         </section>
         <section className="max-w-3xl mx-auto px-6 py-12">

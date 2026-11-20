@@ -41,6 +41,7 @@ const Footer = () => {
         </motion.div>
 
         <div className="border-t border-border pt-6 text-center text-brand-white/40 text-sm">
+          <Link to="/terms-privacy" className="text-primary hover:underline">Terms &amp; Privacy</Link>
           <p>Publishing • Apps • Speaking • Contact</p>
           <p className="mt-1">&copy; {new Date().getFullYear()} Amber Yaghi. All rights reserved.</p>
         </div>

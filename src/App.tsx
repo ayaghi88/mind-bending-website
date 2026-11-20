@@ -20,6 +20,7 @@ import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 import AccidentalGroupie from "./pages/AccidentalGroupie";
 import Actor from "./pages/Actor";
+import TermsPrivacy from "./pages/TermsPrivacy";
 
 const queryClient = new QueryClient();
 
@@ -45,6 +46,7 @@ const App = () => (
             <Route path="/author" element={<Author />} />
             <Route path="/the-accidental-groupie" element={<AccidentalGroupie />} />
             <Route path="/actor" element={<Actor />} />
+            <Route path="/terms-privacy" element={<TermsPrivacy />} />
             <Route path="/reviews" element={<Reviews />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

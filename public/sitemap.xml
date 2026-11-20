@@ -26,7 +26,7 @@
   </url>
   <url>
     <loc>https://amberyaghi.org/apps</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -50,7 +50,7 @@
   </url>
   <url>
     <loc>https://amberyaghi.org/contact</loc>
-    <lastmod>2026-01-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -59,14 +59,21 @@
   </url>
   <url>
     <loc>https://amberyaghi.org/author</loc>
+    <lastmod>2026-11-20</lastmod>
   </url>
   <url>
     <loc>https://amberyaghi.org/reviews</loc>
   </url>
   <url>
     <loc>https://amberyaghi.org/the-accidental-groupie</loc>
+    <lastmod>2026-11-20</lastmod>
   </url>
   <url>
     <loc>https://amberyaghi.org/actor</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://amberyaghi.org/terms-privacy</loc>
+    <lastmod>2026-11-20</lastmod>
   </url>
 </urlset>

@@ -3,4 +3,9 @@
 - [x] Remove duplicate Mind Bending cover displays.
 - [x] Update and validate the sitemap and navigation.
 - [x] Verify the new pages on mobile and desktop.
-- [ ] Connect the reader signup service (waiting for the user's signup link; email requests available meanwhile).
+- [x] Keep reader requests email-only, as requested.
+- [x] Name Amber's first movie and remove screenwriter mentions.
+- [x] Scroll each selected page to the top without resetting mobile tabs.
+- [x] Show app creation as fully booked.
+- [x] Remove author photos and match the verified Lulu biography.
+- [x] Add terms and email privacy notices and verify the updates.

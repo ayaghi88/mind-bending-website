@@ -11,10 +11,12 @@ import { Mail, Loader2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 import { useSearchParams } from 'react-router-dom';
+import EmailPrivacyNotice from '@/components/EmailPrivacyNotice';
+import { appCreationAvailable } from '@/lib/service-availability';
 
 const serviceOptions = [
   { id: 'publish', label: 'Publish a Book' },
-  { id: 'app', label: 'App Creation' },
+  { id: 'app', label: 'App Creation — fully booked', unavailable: !appCreationAvailable },
   { id: 'dns', label: 'DNS / Technical Setup' },
   { id: 'speaking', label: 'Speaking Engagement' },
   { id: 'media', label: 'Interview / Media Request' },
@@ -90,7 +92,7 @@ const Contact = () => {
                 <p className="text-brand-white/70 text-lg mb-12 animate-slide-in-left">
                   {isReview
                     ? 'Have you read Mind Bending, used Lovable Learner, or worked with Amber? Share your experience below — your feedback means the world!'
-                    : 'To inquire about publishing services, app creation, DNS setup, or speaking engagements, please use the form below.'}
+                    : 'For publishing services, speaking engagements, or media requests, please use the form below. App creation is fully booked; no slots are currently available.'}
                 </p>
 
                 <div className="grid md:grid-cols-2 gap-12">
@@ -111,12 +113,13 @@ const Contact = () => {
                             <p className="text-brand-white/60 text-sm font-semibold">I'm interested in:</p>
                             {serviceOptions.map((opt) => (
                               <div key={opt.id} className="flex items-center gap-3">
-                                <Checkbox id={opt.id} checked={formData.services.includes(opt.id)} onCheckedChange={() => toggleService(opt.id)} className="border-brand-red/50 data-[state=checked]:bg-brand-red" />
+                                <Checkbox id={opt.id} disabled={opt.unavailable} checked={formData.services.includes(opt.id)} onCheckedChange={() => toggleService(opt.id)} className="border-brand-red/50 data-[state=checked]:bg-brand-red" />
                                 <label htmlFor={opt.id} className="text-brand-white/70 text-sm cursor-pointer">{opt.label}</label>
                               </div>
                             ))}
                           </div>
                           <Textarea placeholder="Tell me about your project..." value={formData.message} onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))} className="bg-brand-black border-border text-brand-white placeholder:text-brand-white/40 min-h-32" required />
+                          <EmailPrivacyNotice />
                           <Button type="submit" disabled={isSubmitting} className="w-full bg-brand-red hover:bg-brand-red/90 text-white font-bold py-3 hover-glow">
                             {isSubmitting ? (<><Loader2 className="w-4 h-4 mr-2 animate-spin" />Sending...</>) : 'Submit Inquiry →'}
                           </Button>

@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Helmet } from 'react-helmet-async';
 import { Smartphone, BookOpen, Brain, Mic, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { appCreationAvailable } from '@/lib/service-availability';
 
 const AppCreation = () => {
   const useCases = [
@@ -17,7 +18,7 @@ const AppCreation = () => {
     <>
       <Helmet>
         <title>App Creation & Digital Products | Amber Yaghi</title>
-        <meta name="description" content="Custom app creation and digital product development by Amber Yaghi. Companion apps for books, AI-powered tools, and content hubs for authors and speakers." />
+        <meta name="description" content="Explore Amber Yaghi's apps and digital products. App creation services are currently fully booked with no slots available." />
         <link rel="canonical" href="https://amberyaghi.org/apps" />
       </Helmet>
       <PageLayout>
@@ -28,6 +29,7 @@ const AppCreation = () => {
                 <h1 className="font-playfair font-black text-4xl md:text-5xl lg:text-6xl text-brand-white mb-6 animate-fade-in">
                   App Creation & Digital Products
                 </h1>
+                {!appCreationAvailable && <p role="status" className="bg-primary/10 border-l-4 border-primary text-foreground px-5 py-4 mb-6 font-semibold">Currently fully booked — no app creation slots are available. Not accepting new app projects at this time.</p>}
 
                 <p className="text-brand-white/70 text-lg md:text-xl leading-relaxed mb-12 animate-slide-in-left">
                   Amber Yaghi designs and deploys custom applications and digital tools for authors, educators, and creators. Apps can be built as standalone products or as companions to books, courses, or speaking engagements.
@@ -100,9 +102,7 @@ const AppCreation = () => {
                   <p className="text-brand-white/60 text-center italic">We'd love to hear your feedback! If you've used Lovable Learner or any of our apps, please share your review or suggestions.</p>
                 </div>
 
-                <Link to="/contact">
-                  <Button className="bg-brand-red hover:bg-brand-red/90 text-white font-bold px-8 py-4 text-lg hover-glow">Discuss an App Project →</Button>
-                </Link>
+                {appCreationAvailable && <Link to="/contact"><Button>Discuss an App Project →</Button></Link>}
               </div>
             </div>
           </div>

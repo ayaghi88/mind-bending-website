@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Mail, Loader2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
+import EmailPrivacyNotice from '@/components/EmailPrivacyNotice';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -125,6 +126,7 @@ const ContactSection = () => {
                       />
                     </div>
                     
+                    <EmailPrivacyNotice />
                     <Button 
                       type="submit"
                       disabled={isSubmitting}
